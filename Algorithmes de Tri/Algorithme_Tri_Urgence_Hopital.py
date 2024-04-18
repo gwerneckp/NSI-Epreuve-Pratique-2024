@@ -1,4 +1,5 @@
 # Fonction tri selection
+Attente = [(45, 2), (47, 1), (49, 3)]
 
 def tri(attente):
     for i in range(len(attente)):
@@ -11,10 +12,10 @@ def tri(attente):
         temp = attente[i]
         attente[i] = attente[pos]
         attente[pos] = temp
-        return None
+        return attente
 
 
-def quitte(attente, nom):
+def quitte(attente):
     return [...]
 
 def maj(attente):
