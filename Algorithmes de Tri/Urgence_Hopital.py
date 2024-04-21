@@ -1,5 +1,10 @@
 # Fonction tri selection
-attente = [(45, 2), (47, 1), (49, 3)]
+attente_variable = [(45, 2), (47, 1), (49, 3)]
+
+# L'instruction qui permet d'inserer dans la liste attente_variable le tuple (50, 4) est:
+
+
+# Compléter ces fonctions :
 
 def tri(attente):
     for i in range(len(attente)):
@@ -9,11 +14,10 @@ def tri(attente):
             if attente[j][1] < mini:
                 pos = j
                 mini = attente[j][1]
-        temp = attente[i]
-        attente[i] = attente[pos]
-        attente[pos] = temp
-        return attente
-
+        ...
+        ...
+        ...
+    return None
 
 def quitte(attente):
     return [...]
