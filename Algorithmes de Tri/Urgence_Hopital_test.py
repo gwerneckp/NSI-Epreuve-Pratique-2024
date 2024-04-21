@@ -1,4 +1,4 @@
-import Algorithme_Tri_Urgence_Hopital as algo;
+import Urgence_Hopital as algo;
 
 attente_variable = [(45, 2), (47, 1), (49, 3)]
 
