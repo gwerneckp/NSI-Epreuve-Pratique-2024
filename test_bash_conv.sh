@@ -9,12 +9,17 @@ nom_fichier_notebook="essai_notebook.ipynb"
 # Chemin vers le fichier notebook
 chemin_notebook="${repertoire_notebook}/${nom_fichier_notebook}"
 
-# Chemin vers le script Python généré
-nom_script_python="essai_notebook.py"
-chemin_script_python="${repertoire_notebook}/${nom_script_python}"
+# Chemin vers le fichier Python généré
+chemin_python="${repertoire_notebook}/${nom_fichier_notebook%.*}.py"
+
+# Vérifie si le fichier Python existe déjà
+if [ -f "$chemin_python" ]; then
+    # Si oui, le supprime
+    rm "$chemin_python"
+fi
 
 # Conversion du notebook en script Python
-jupyter nbconvert --to script "${chemin_notebook}" --output "${chemin_script_python}" --execute
+jupyter nbconvert --to script "${chemin_notebook}" --output "${chemin_python}" --execute
 
 # Exécution du test unitaire sur le script Python généré
-pytest Notebook/essai_notebook_test.py
+pytest "${repertoire_notebook}/essai_notebook_test.py"

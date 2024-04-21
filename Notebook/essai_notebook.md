@@ -4,9 +4,6 @@ import math
 print("Enter the radius of the circle: ")
 ```
 
-    Enter the radius of the circle: 
-
-
 # exercice entrainement
 
 Finir cette fonction
@@ -17,12 +14,7 @@ Finir cette fonction
 
 ```python
 def fonctions(r):
-    area = math.pi * r**2
+    area = math.pi * r**3
     return area
 
-r = 10
-print(fonctions(r))
 ```
-
-    314.1592653589793
-
