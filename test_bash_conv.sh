@@ -14,7 +14,7 @@ chemin_python="${repertoire_notebook}/${nom_fichier_notebook%.*}.py"
 
 
 # Conversion du notebook en script Python
-jupyter nbconvert --to script "${chemin_notebook}" 
+sudo jupyter nbconvert --to script "${chemin_notebook}" 
 
 # Exécution du test unitaire sur le script Python généré
 pytest "${repertoire_notebook}/essai_notebook_test.py"

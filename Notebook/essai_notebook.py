@@ -20,6 +20,6 @@ print("Enter the radius of the circle: ")
 
 
 def fonctions(r):
-    area = math.pi * r**5
+    area = math.pi * r**2
     return area
 
