@@ -4,7 +4,7 @@ import math
 print("Enter the radius of the circle: ")
 ```
 
-    Enter the radius of the circle: 
+Enter the radius of the circle: 
 
 
 # exercice entrainement
