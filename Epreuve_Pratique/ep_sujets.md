@@ -1248,14 +1248,14 @@ class Paquet_de_cartes:
 Exemple :
 
 ```markdown
-assert jeu = Paquet_de_cartes()
-assert carte1 = jeu.recuperer_carte(20)
-assert carte1.recuperer_valeur() + " de " + carte1.recuperer_couleur()
+>>>> jeu = Paquet_de_cartes()
+>>>> carte1 = jeu.recuperer_carte(20)
+>>>> carte1.recuperer_valeur() + " de " + carte1.recuperer_couleur()
 "8 de coeur"
-assert carte2 = jeu.recuperer_carte(0)
-assert carte2.recuperer_valeur() + " de " + carte2.recuperer_couleur()
+>>>> carte2 = jeu.recuperer_carte(0)
+>>>> carte2.recuperer_valeur() + " de " + carte2.recuperer_couleur()
 "As de pique"
-assert carte3 = jeu.recuperer_carte(52)
+>>>> carte3 = jeu.recuperer_carte(52)
 AssertionError : paramètre pos invalide
 ```
 
@@ -1626,21 +1626,21 @@ On pourra utiliser la fonction `randint(a,b)` du module `random` pour laquelle l
 Exemples :
 
 ```markdown
-assert lancer1 = lancer(5)
+>>>> lancer1 = lancer(5)
 [5, 6, 6, 2, 2]
-assert paire_6(lancer1)
+>>>> paire_6(lancer1)
 True
-assert lancer2 = lancer(5)
+>>>>lancer2 = lancer(5)
 [6, 5, 1, 6, 6]
-assert paire_6(lancer2)
+>>>> paire_6(lancer2)
 True
-assert lancer3 = lancer(3)
+>>>> lancer3 = lancer(3)
 [2, 2, 6]
-assert paire_6(lancer3)
+>>>> paire_6(lancer3)
 False
-assert lancer4 = lancer(0)
+>>>> lancer4 = lancer(0)
 []
-assert paire_6(lancer4)
+>>>> paire_6(lancer4)
 False
 ```
 
