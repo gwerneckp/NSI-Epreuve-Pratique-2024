@@ -1,4 +1,4 @@
-# Sujet_1
+# Sujet_01
 
 ## s_1.1
 
@@ -86,6 +86,7 @@ Compléter le code de cette fonction de façon à obtenir :
 assert tri_selection([41, 55, 21, 18, 12, 6, 25])==[6, 12, 18, 21, 25, 41, 55]
 ```
 
+# Sujet_02
 ## s_2.2
 
 On considère des chaînes de caractères contenant uniquement des majuscules et des carac-
@@ -199,6 +200,7 @@ assert est_cyclique({'A':'B', 'F':'C', 'C':'D', 'E':'A', 'B':'F', 'D':'E'})==Tru
 assert est_cyclique({'A':'B', 'F':'A', 'C':'D', 'E':'C', 'B':'F', 'D':'E'})==False
 ```
 
+# Sujet_03
 ## S_3.1
 
 Écrire la fonction `maximum_tableau`, prenant en paramètre un tableau non vide de nombres `tab` (de type
@@ -296,6 +298,7 @@ assert bon_parenthesage("())(()")==False
 assert bon_parenthesage("(())(()")==False
 ```
 
+# Sujet_04
 ## S_4.1
 
 Programmer la fonction `recherche`, prenant en paramètres un tableau non vide `tab` (type `list`) d'entiers et un entier `n`, et qui renvoie l'indice de la **dernière** occurrence de l'élément cherché. Si l'élément n'est pas présent, la fonction renvoie `None`.
@@ -356,6 +359,7 @@ assert point_le_plus_proche((0, 0), [(7, 9), (2, 5), (5, 2)])==(2, 5)
 assert point_le_plus_proche((5, 2), [(7, 9), (2, 5), (5, 2)])==(5, 2)
 ```
 
+# Sujet_05
 ## S_5.1
 
 Écrire une fonction `max_et_indice` qui prend en paramètre un tableau non vide `tab` de
@@ -459,7 +463,7 @@ assert nombre_points_rupture([1, 6, 2, 8, 3, 7, 4, 5])==7
 assert nombre_points_rupture([2, 1, 3, 4])==2
 ```
 
-
+# Sujet_06
 ## S_6.1
 
 Écrire une fonction `verifie` qui prend en paramètre un tableau de valeurs numériques et qui renvoie `True` si ce tableau est trié dans l’ordre croissant, `False` sinon.
@@ -534,6 +538,7 @@ assert vainqueurs({'A': 3, 'B': 4, 'C': 3})==['B']
 assert vainqueurs({ 'A' : 2, 'B' : 2, 'C' : 1})==['A', 'B']
 ```
 
+# Sujet_07
 ## S_7.1
 
 On considère dans cet exercice une représentation binaire d’un entier non signé en tant que
@@ -608,6 +613,7 @@ Exemples :
 assert tri_insertion([98, 12, 104, 23, 131, 9])==[9, 12, 23, 98, 104, 131]
 ```
 
+# Sujet_08
 ## S_8.1
 
 Le codage par différence (*delta encoding* en anglais) permet de compresser un tableau
@@ -699,6 +705,7 @@ e = Expr(Expr(Expr(None, 3, None), '*', Expr(Expr(None, 8, None), '+', Expr(None
 assert e.infixe()=='((3*(8+7))-(2+1))'
 ```
 
+# Sujet_09
 ## S_9.1
 
 On veut trier par ordre croissant les notes d’une évaluation qui sont des nombres entiers
@@ -804,6 +811,7 @@ La fonction récursive bin_to_dec prend en paramètre une chaîne de caractères
 assert bin_to_dec('101010')==42
 ```
 
+# Sujet_10
 ## S_10.1
 
 Dans cet exercice on cherche à calculer la moyenne pondérée d’un élève dans une matière
@@ -956,6 +964,7 @@ affiche(dessin_zoom(coeur,2))
 assert liste_zoom([1,2,3],3)==[1, 1, 1, 2, 2, 2, 3, 3, 3]
 ```
 
+# Sujet_11
 ## S_11.1
 
 Dans cet exercice, on considère des phrases composées de mots.
@@ -1042,6 +1051,7 @@ assert arbre.gauche.gauche.etiquette==1
 assert arbre.gauche.droit.etiquette==6
 ```
 
+# Sujet_12
 ## S_12.1
 
 Écrire une fonction `tri_selection` qui prend en paramètre un tableau `tab` de nombres
@@ -1110,6 +1120,7 @@ def plus_ou_moins():
         print ("Perdu ! Le nombre était ",...)
 ```
 
+# Sujet_13
 ## S_13.1
 
 Écrire une fonction `recherche` qui prend en paramètres `elt` un nombre entier et `tab`
@@ -1169,6 +1180,7 @@ assert insere([2, 3, 4], 1)==[1, 2, 3, 4]
 assert insere([], 1)==[1]
 ```
 
+# Sujet_14
 ## S_14.1
 
 Écrire une fonction `min_et_max` qui prend en paramètre un tableau de nombres `tab` non vide, et qui renvoie la plus petite et la plus grande valeur du tableau sous la
@@ -1259,6 +1271,7 @@ Exemple :
 AssertionError : paramètre pos invalide
 ```
 
+# Sujet_15
 ## S_15.1
 
 Écrire une fonction `moyenne` qui prend en paramètre un tableau non vide de nombres
@@ -1312,6 +1325,7 @@ assert binaire(127)=='1111111'
 assert binaire(0)=='0'
 ```
 
+# Sujet_16
 ## S_16.1
 
 Écrire une fonction `ecriture_binaire_entier_positif` qui prend en paramètre un
@@ -1392,6 +1406,7 @@ assert tri_bulles([9, 3, 7, 2, 3, 1, 6])==[1, 2, 3, 3, 6, 7, 9]
 assert tri_bulles([9, 7, 4, 3])==[3, 4, 7, 9]
 ```
 
+# Sujet_17
 ## S_17.1
 
 Écrire une fonction Python appelée `nb_repetitions` qui prend en paramètres un
@@ -1443,6 +1458,7 @@ assert binaire(0)=='0'
 assert binaire(77)=='1001101'
 ```
 
+# Sujet_18
 ## S_18.1
 
 Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers relatifs
@@ -1507,6 +1523,7 @@ assert chercher([1, 5, 6, 6, 9, 12], 9, 0, 5)==4
 assert chercher([1, 5, 6, 6, 9, 12], 6, 0, 5)==2
 ```
 
+# Sujet_19
 ## S_19.1
 
 On rappelle que :
@@ -1608,6 +1625,7 @@ assert codes_parfait("PAUL")==(50, 1612112, False)
 assert codes_parfait("ALAIN")==(37, 1121914, True)
 ```
 
+# Sujet_20
 ## S_20.1
 
 Dans cet exercice les tableaux sont représentés par des listes Python (type `list`).
@@ -1709,6 +1727,7 @@ assert negatif(img)==[[235, 221, 1, 110, 249], [232, 131, 18, 30, 186],[58, 81, 
 assert binaire(img,120)==[[0, 0, 1, 1, 0],[0, 1, 1, 1, 0],[1, 1, 1, 0, 0],[1, 0, 0, 1, 1]]
 ```
 
+# Sujet_21
 ## S_21.1
 
 Écrire une fonction `recherche_motif` qui prend en paramètre une chaîne de caractères
@@ -1775,7 +1794,7 @@ assert accessibles([[1, 2], [0], [0, 3], [1], [5], [4]], 0)==[0, 1, 2, 3]
 assert accessibles([[1, 2], [0], [0, 3], [1], [5], [4]], 4)==[4, 5]
 ```
 
-
+# Sujet_22
 ## S_22.1
 
 Écrire une fonction `recherche_indices_classement` qui prend en paramètres un
@@ -1861,7 +1880,7 @@ assert moyenne("Dupont", resultats)==14.5
 assert moyenne("Durand", resultats)==8.5
 ```
 
-
+# Sujet_23
 ## S_23.1
 
 Dans cet exercice, on considère des arbres binaires de recherche qui sont :
@@ -1946,6 +1965,7 @@ assert empaqueter([1, 2, 3, 4, 5], 5)==4
 assert empaqueter([7, 6, 3, 4, 8, 5, 9, 2], 11)==5
 ```
 
+# Sujet_24
 ## S_24.1
 
 Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soit un nœud représenté par un triplet `(g, x, d)` où `x` est l’étiquette du nœud et `g` et `d` sont les sous-arbres gauche et droit.
