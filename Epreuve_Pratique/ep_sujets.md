@@ -80,7 +80,5 @@ def tri_selection(tab):
 Compléter le code de cette fonction de façon à obtenir :
 
 ```python
-
 assert tri_selection([41, 55, 21, 18, 12, 6, 25])==[6, 12, 18, 21, 25, 41, 55]
-
 ```
