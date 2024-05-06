@@ -5,6 +5,9 @@ import ep_sujets
 class TestEpSujets(unittest.TestCase):
 
     def test_taille(self):
+        a = {'F':['B','G'], 'B':['A','D'], 'A':['',''], 'D':['C','E'], \
+'C':['',''], 'E':['',''], 'G':['','I'], 'I':['','H'], \
+'H':['','']}
         self.assertEqual(ep_sujets.taille(a, 'F')==9)
         self.assertEqual(ep_sujets.taille(a, 'B')==5)
         self.assertEqual(ep_sujets.taille(a, 'I')==2)
