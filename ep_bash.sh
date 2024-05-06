@@ -1,6 +1,5 @@
-#!/bin/bash
 repertoire_notebook="Epreuve_Pratique"
-nom_fichier_notebook="sujet_06.ipynb"
+nom_fichier_notebook="ep_sujets.ipynb"
 repertoire_destination="."
 chemin_notebook="${repertoire_destination}/${repertoire_notebook}/${nom_fichier_notebook}"
 chemin_python="${repertoire_destination}/${repertoire_notebook}/${nom_fichier_notebook%.*}.py"
@@ -11,4 +10,4 @@ pip install pytest
 pip install notebook nbconvert
 
 jupyter nbconvert --to python "${chemin_notebook}"
-pytest "${repertoire_destination}/${repertoire_notebook}/sujet_06_test.py"
+pytest "${repertoire_destination}/${repertoire_notebook}/ep_sujets_test.py"
