@@ -76,7 +76,8 @@ def tri_selection(tab):
         for i in range(..., N): 
             if tab[i] < ...: 
                 imin = i
-        echange(tab, ..., ...) 
+        echange(tab, ..., ...)
+    return tab
 ```
 
 Compléter le code de cette fonction de façon à obtenir :
