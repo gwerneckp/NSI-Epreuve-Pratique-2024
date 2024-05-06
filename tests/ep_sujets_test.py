@@ -1,6 +1,6 @@
   
 import unittest
-import ep_sujets
+from Epreuve_Pratique import ep_sujets
 
 class TestEpSujets(unittest.TestCase):
 
