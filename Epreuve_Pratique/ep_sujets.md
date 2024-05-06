@@ -1,13 +1,3 @@
----
-parent: "[[Fleeting MOC]]"
-tags:
-  - info
-  - epreuve_pratique
-"type:": 
-share: 
-publish: "false"
-date: " 6th May 2024 10:18"
----
 # Sujet_1
 
 ## s_1.1
@@ -90,5 +80,7 @@ def tri_selection(tab):
 Compléter le code de cette fonction de façon à obtenir :
 
 ```python
+
 assert tri_selection([41, 55, 21, 18, 12, 6, 25])==[6, 12, 18, 21, 25, 41, 55]
+
 ```
