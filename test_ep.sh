@@ -11,4 +11,4 @@ pip install pytest
 pip install notebook nbconvert
 
 jupyter nbconvert --to python "${chemin_notebook}"
-pytest "${repertoire_destination}/${repertoire_notebook}/sujet_06_test.py"
+pytest "${repertoire_destination}/tests/sujet_06_test.py"
