@@ -87,7 +87,7 @@ assert tri_selection([41, 55, 21, 18, 12, 6, 25])==[6, 12, 18, 21, 25, 41, 55]
 ```
 
 # Sujet_02
-## s_2.2
+## s_2.1
 
 On considère des chaînes de caractères contenant uniquement des majuscules et des carac-
 tères `*` appelées *mots à trous*.
@@ -107,7 +107,7 @@ Programmer une fonction `correspond` qui :
 ```python
 def correspond(a,b):
     pass
-````
+```
 
 
 Exemple :
@@ -209,7 +209,7 @@ assert est_cyclique({'A':'B', 'F':'A', 'C':'D', 'E':'C', 'B':'F', 'D':'E'})==Fal
 ```python
 def maximum_tableau(a):
     pass
-````
+```
 
 
 Exemples :
@@ -306,7 +306,7 @@ Programmer la fonction `recherche`, prenant en paramètres un tableau non vide `
 ```python
 def recherche(a):
     pass
-````
+```
 
 
 Exemples
@@ -558,7 +558,7 @@ l’entier qu’il représente.
 ```python
 def gb_vers_entier(a):
     pass
-````
+```
 
 
 Exemple :
@@ -927,7 +927,7 @@ affiche(coeur)
          *       *        
            *   *          
              *
-````
+```
           
 
 
