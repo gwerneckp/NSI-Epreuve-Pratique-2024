@@ -10,7 +10,7 @@ On utilise la valeur `''` pour représenter un fils vide.
 
 Par exemple, l’arbre
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 
 est stocké dans
@@ -642,7 +642,7 @@ représentée sous forme d’arbre binaire. Les nœuds internes sont des opérat
 sont des nombres. Dans un tel arbre, la disposition des nœuds joue le rôle des parenthèses que
 nous connaissons bien.  
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 En parcourant en profondeur infixe l’arbre binaire ci-dessus, on
 retrouve l’expression notée habituellement :  
@@ -836,7 +836,7 @@ assert moyenne([(3, 0), (5, 0)])==None
 
 ## S_10.2
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 On travaille sur des dessins en noir et blanc obtenus à partir de pixels noirs et blancs :
 La figure « cœur » ci-dessus va servir d’exemple.
@@ -1286,7 +1286,7 @@ Cette fonction prend en paramètre un entier positif `a` en
 L’algorithme utilise la méthode des divisions euclidiennes successives comme l’illustre
 l’exemple ci-après.
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 Compléter le code de la fonction `binaire`.
 
@@ -1416,7 +1416,7 @@ assert nb_repetitions(12, [1, 3, 7, 21, 36, 44])==0
 Pour rappel, la conversion d’un nombre entier positif en binaire peut s’effectuer à l’aide
 des divisions successives comme illustré ici :
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 Voici une fonction Python basée sur la méthode des divisions successives permettant de
 convertir un nombre entier positif en binaire :
@@ -1737,7 +1737,7 @@ d’adjacence. On suppose que les sommets sont numérotés de 0 à n-1.
 
 Ainsi, le graphe suivant:
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 sera représenté par la liste d’adjacence suivante:
 
@@ -1869,7 +1869,7 @@ Dans cet exercice, on considère des arbres binaires de recherche qui sont :
 - soit l’arbre vide identifié par `None` ;
 - soit un nœud, contenant une clé et deux sous-arbres gauche et droit et représenté par un triplet `(g, v, d)` où `g` et `d` sont les sous-arbres gauche et droit et `v` la clé.
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 Ainsi, l’arbre binaire de recherche `abr1` ci-contre est créé par le code python ci-dessous
 
