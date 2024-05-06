@@ -21,6 +21,8 @@ a = {'F':['B','G'], 'B':['A','D'], 'A':['',''], 'D':['C','E'], \
 'H':['','']}
 
 # Votre code
+def taille(dictionnaire):
+    pass
 ```
 
 Écrire une fonction récursive `taille` prenant en paramètres un arbre binaire `arbre` non vide
