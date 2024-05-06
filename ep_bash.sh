@@ -9,5 +9,6 @@ pip install --upgrade pip
 pip install pytest
 pip install notebook nbconvert
 
-jupyter nbconvert --to python "${chemin_notebook}"
+jupyter nbconvert --to python --output-dir="${repertoire_destination}/${repertoire_notebook}" "${chemin_notebook}"
 pytest "${repertoire_destination}/tests/ep_sujets_test.py"
+
