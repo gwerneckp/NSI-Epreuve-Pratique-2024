@@ -1,4 +1,4 @@
-import sujet_06;
+from Epreuve_Pratique import sujet_06;
 
 
 def test_Exo_1():
