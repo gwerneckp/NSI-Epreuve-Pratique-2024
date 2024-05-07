@@ -1641,26 +1641,32 @@ On pourra utiliser la fonction `randint(a,b)` du module `random` pour laquelle l
 
 `      Renvoie un entier aléatoire N tel que a <=N <= b.`
 
+```python
+def lancer(n):
+    pass
+
+def paire_6(tab):
+    pass
+```
+
 Exemples :
 
-```markdown
->>>> lancer1 = lancer(5)
-[5, 6, 6, 2, 2]
->>>> paire_6(lancer1)
-True
->>>>lancer2 = lancer(5)
-[6, 5, 1, 6, 6]
->>>> paire_6(lancer2)
-True
->>>> lancer3 = lancer(3)
-[2, 2, 6]
->>>> paire_6(lancer3)
-False
->>>> lancer4 = lancer(0)
-[]
->>>> paire_6(lancer4)
-False
-```
+`>>>> lancer1 = lancer(5)`  
+`[5, 6, 6, 2, 2]`  
+`>>>> paire_6(lancer1)`  
+`True`  
+`>>>>lancer2 = lancer(5)`
+`[6, 5, 1, 6, 6]`   
+`>>>> paire_6(lancer2)`   
+`True`   
+`>>>> lancer3 = lancer(3)`   
+`[2, 2, 6]`  
+`>>>> paire_6(lancer3)`  
+`False`  
+`>>>> lancer4 = lancer(0)`  
+`[]`  
+`>>>> paire_6(lancer4)`  
+`False`
 
 ## S_20.2
 
