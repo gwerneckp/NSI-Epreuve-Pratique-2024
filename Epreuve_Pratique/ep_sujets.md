@@ -89,19 +89,15 @@ assert tri_selection([41, 55, 21, 18, 12, 6, 25])==[6, 12, 18, 21, 25, 41, 55]
 # Sujet_02
 ## s_2.1
 
-On considère des chaînes de caractères contenant uniquement des majuscules et des carac-
-tères `*` appelées *mots à trous*.
+On considère des chaînes de caractères contenant uniquement des majuscules et des caractères `*` appelées *mots à trous*.
 
-Par exemple `INFO*MA*IQUE`, `***I***E**` et
-`*S*` sont des mots à trous.
+Par exemple `INFO*MA*IQUE`, `***I***E**` et `*S*` sont des mots à trous.
 
 Programmer une fonction `correspond` qui :
 
-- prend en paramètres deux chaînes de caractères `mot` et `mot_a_trous` où
-`mot_a_trous` est un mot à trous comme indiqué ci-dessus, 
+- prend en paramètres deux chaînes de caractères `mot` et `mot_a_trous` où `mot_a_trous` est un mot à trous comme indiqué ci-dessus, 
 - renvoie :
-    - `True` si on peut obtenir `mot` en remplaçant convenablement les caractères
-`'*'` de `mot_a_trous`.
+    - `True` si on peut obtenir `mot` en remplaçant convenablement les caractères `'*'` de `mot_a_trous`.
     - `False` sinon.
 
 ```python
@@ -221,15 +217,12 @@ assert maximum_tableau([-27, 24, -3, 15])==24
 
 ## S_3.2
 
-On dispose de chaînes de caractères contenant uniquement des parenthèses ouvrantes et
-fermantes. 
+On dispose de chaînes de caractères contenant uniquement des parenthèses ouvrantes et fermantes. 
 
 Un parenthésage est correct si :
 
-- le nombre de parenthèses ouvrantes de la chaîne est égal au nombre de parenthèses
-fermantes.
-- en parcourant la chaîne de gauche à droite, le nombre de parenthèses déjà ouvertes doit
-être, à tout moment, supérieur ou égal au nombre de parenthèses déjà fermées.
+- le nombre de parenthèses ouvrantes de la chaîne est égal au nombre de parenthèses fermantes.
+- en parcourant la chaîne de gauche à droite, le nombre de parenthèses déjà ouvertes doit être, à tout moment, supérieur ou égal au nombre de parenthèses déjà fermées.
 
 
 Ainsi, `((()())(()))` est un parenthésage correct. 
