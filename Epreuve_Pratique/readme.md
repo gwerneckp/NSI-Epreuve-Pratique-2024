@@ -13,6 +13,12 @@ Puis charger votre travail sur le github `remote`
 - commit -m "exercices fait"
 - git push
 
+## Environnement virtuel
+Il est recommandé d'activer son environnement virtuel avant d'installer les dépendances.
+
+- python -m venv myenv
+- source myenv/bin/activate
+
 
 ## Convertion d'un fichier Markdown en Notebook
 - pip install --upgrade pip
