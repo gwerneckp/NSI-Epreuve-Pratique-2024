@@ -21,7 +21,7 @@ a = {'F':['B','G'], 'B':['A','D'], 'A':['',''], 'D':['C','E'], \
 'H':['','']}
 
 # Votre code
-def taille(dictionnaire):
+def taille(arbre, lettre):
     pass
 ```
 
