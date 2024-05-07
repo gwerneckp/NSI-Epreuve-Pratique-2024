@@ -878,8 +878,22 @@ affiche(coeur)
 ![alt text](images/coeur_1.png)
 
 
+Testez la fonction `affiche(dessin_zoom(coeur,2))`
+
 ```python
-affiche(dessin_zoom(coeur,2))
+# Votre code ici
+coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], 
+        [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], 
+        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], 
+        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+        [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], 
+        [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], 
+        [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 ```
 
 ![alt text](images/coeur_2.png)
@@ -932,29 +946,35 @@ une instance de la classe Noeud donnée ci-dessous.
 On considère ici que les étiquettes des nœuds sont des entiers et que les arbres binaires de
 recherche considérés ne contiennent pas de doublons.
 
-```python
-class Noeud:
-    def __init__(self, etiquette):
-        '''Méthode constructeur pour la classe Noeud.
-        Crée une feuille d'étiquette donnée.'''
-        self.etiquette = etiquette
-        self.gauche = None
-        self.droit = None
+>```python
+>class Noeud:
+>   def __init__(self, etiquette):
+>       '''Méthode constructeur pour la classe Noeud.
+>       Crée une feuille d'étiquette donnée.'''
+>       self.etiquette = etiquette
+>       self.gauche = None
+>       self.droit = None
+>
+>   def inserer(self, cle):
+>       '''Insère la clé dans l'arbre binaire de recherche
+>       en préservant sa structure.'''
+>       if cle < self.etiquette:
+>           if self.gauche != None:
+>               ...
+>           else:
+>               self.gauche = ... 
+>       else:
+>           ...
+>               ...
+>           else:
+>               ... = Noeud(cle)
+>```
 
-    def inserer(self, cle):
-        '''Insère la clé dans l'arbre binaire de recherche
-        en préservant sa structure.'''
-        if cle < self.etiquette:
-            if self.gauche != None:
-                ...
-            else:
-                self.gauche = ... 
-        else:
-            ...
-                ...
-            else:
-                ... = Noeud(cle)
+```python
+# Votre code ici
 ```
+
+
 
 Compléter la méthode récursive inserer afin qu’elle permette d’insérer une clé dans l’arbre binaire de recherche non vide sur lequel on l’appelle.
 
@@ -1015,27 +1035,27 @@ nombre entier compris entre `a` et `b`.
 
 Compléter le code ci-dessous et le tester :
 
-```python
-from random import randint
-
-def plus_ou_moins():
-    nb_mystere = randint(1,...)
-    nb_test = int(input("Proposez un nombre entre 1 et 99 : "))
-    compteur = ...
-
-    while nb_mystere != ... and compteur < ... :
-        compteur = compteur + ...
-        if nb_mystere ... nb_test:
-            nb_test = int(input("Trop petit ! Testez encore : "))
-        else:
-            nb_test = int(input("Trop grand ! Testez encore : "))
-
-    if nb_mystere == nb_test:
-        print ("Bravo ! Le nombre était ",...)
-        print("Nombre d'essais: ",...)
-    else:
-        print ("Perdu ! Le nombre était ",...)
-```
+>```python
+>from random import randint
+>
+>def plus_ou_moins():
+>    nb_mystere = randint(1,...)
+>    nb_test = int(input("Proposez un nombre entre 1 et 99 : "))
+>    compteur = ...
+>
+>    while nb_mystere != ... and compteur < ... :
+>        compteur = compteur + ...
+>        if nb_mystere ... nb_test:
+>            nb_test = int(input("Trop petit ! Testez encore : "))
+>        else:
+>            nb_test = int(input("Trop grand ! Testez encore : "))
+>
+>    if nb_mystere == nb_test:
+>        print ("Bravo ! Le nombre était ",...)
+>        print("Nombre d'essais: ",...)
+>    else:
+>        print ("Perdu ! Le nombre était ",...)
+>```
 
 # Sujet_13
 ## S_13.1
@@ -1142,37 +1162,42 @@ On rappelle que l’instruction
 
 permet de vérifier que la condition est vraie. Si ce n’est pas le cas, le programme s’arrête et affiche le message d’erreur fourni.
 
+>```python
+>class Carte:
+>    def __init__(self, c, v):
+>        """ Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). """
+>        self.couleur = c
+>        self.valeur = v
+>
+>    def recuperer_valeur(self):
+>        """ Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi """
+>        valeurs = ['As','2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi']
+>        return valeurs[self.valeur - 1]
+>
+>    def recuperer_couleur(self):
+>        """ Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). """
+>        couleurs = ['pique', 'coeur', 'carreau', 'trèfle']
+>        return couleurs[self.couleur - 1]
+>
+>class Paquet_de_cartes:
+>    def __init__(self):
+>        """ Initialise l'attribut contenu avec une liste des 52 objets Carte possibles
+>            rangés par valeurs croissantes en commençant par pique, puis coeur,
+>            carreau et tréfle. """
+>        ...
+>        ...
+>            ...
+>                ...
+>
+>    def recuperer_carte(self, pos):
+>        """ Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). """
+>        ...
+>        ...
+>```
+
+
 ```python
-class Carte:
-    def __init__(self, c, v):
-        """ Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). """
-        self.couleur = c
-        self.valeur = v
-
-    def recuperer_valeur(self):
-        """ Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi """
-        valeurs = ['As','2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi']
-        return valeurs[self.valeur - 1]
-
-    def recuperer_couleur(self):
-        """ Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). """
-        couleurs = ['pique', 'coeur', 'carreau', 'trèfle']
-        return couleurs[self.couleur - 1]
-
-class Paquet_de_cartes:
-    def __init__(self):
-        """ Initialise l'attribut contenu avec une liste des 52 objets Carte possibles
-            rangés par valeurs croissantes en commençant par pique, puis coeur,
-            carreau et tréfle. """
-        ...
-        ...
-            ...
-                ...
-
-    def recuperer_carte(self, pos):
-        """ Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). """
-        ...
-        ...
+# Votre code ici
 ```
 
 Exemple :
@@ -1687,24 +1712,28 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.
 
 Compléter la fonction suivante.
 
-```python
-def parcours(adj, x, acc):
-    '''Réalise un parcours en profondeur récursif
-    du graphe donné par les listes d'adjacence adj 
-    depuis le sommet x en accumulant les sommets
-    rencontrés dans acc'''
-    if x ...: 
-        acc.append(x)
-        for y in ...: 
-            parcours(adj, ...) 
+>```python
+>def parcours(adj, x, acc):
+>    '''Réalise un parcours en profondeur récursif
+>    du graphe donné par les listes d'adjacence adj 
+>    depuis le sommet x en accumulant les sommets
+>    rencontrés dans acc'''
+>    if x ...: 
+>        acc.append(x)
+>        for y in ...: 
+>            parcours(adj, ...) 
+>
+>def accessibles(adj, x):
+>    '''Renvoie la liste des sommets accessibles dans le
+>    graphe donné par les listes d'adjacence adj depuis
+>    le sommet x.'''
+>    acc = []
+>    parcours(adj, ...) 
+>    return acc
+>```
 
-def accessibles(adj, x):
-    '''Renvoie la liste des sommets accessibles dans le
-    graphe donné par les listes d'adjacence adj depuis
-    le sommet x.'''
-    acc = []
-    parcours(adj, ...) 
-    return acc
+```python
+# Votre code ici
 ```
 
 Exemples :
