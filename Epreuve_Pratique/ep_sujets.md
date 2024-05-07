@@ -469,7 +469,6 @@ def verifie(a):
 Exemples :
 
 ```python
-Exemples :
 assert verifie([0, 5, 8, 8, 9])==True
 assert verifie([8, 12, 4])==False
 assert verifie([-1, 4])==True
@@ -1455,6 +1454,9 @@ Programmer également une fonction `liste_puisssances_borne` qui prend en argume
 
 ```python
 def liste_puissances(a, b):
+    pass
+
+def liste_puissances_borne(a, b):
     pass
 ```
 
