@@ -401,12 +401,9 @@ Compléter les fonctions Python `est_un_ordre` et `nombre_points_rupture`
 proposées à la page suivante pour que :
 
 
-- la fonction `est_un_ordre` renvoie `True` si le tableau passé en paramètre
-représente bien un ordre de gènes de chromosome et `False` sinon ;
+- la fonction `est_un_ordre` renvoie `True` si le tableau passé en paramètre représente bien un ordre de gènes de chromosome et `False` sinon ;
 
-- la fonction `nombre_points_rupture` renvoie le nombre de points de rupture
-d’un tableau passé en paramètre représentant l’ordre de gènes d’un
-chromosome.
+- la fonction `nombre_points_rupture` renvoie le nombre de points de rupture d’un tableau passé en paramètre représentant l’ordre de gènes d’un chromosome.
 
 ```python
 def est_un_ordre(tab):
@@ -483,8 +480,8 @@ assert verifie([5])==True
 ## S_6.2
 
 On considère dans cet exercice l’élection d’un vainqueur à l’issue d’un vote. Les résultats
-du vote sont stockés dans un tableau : chaque vote exprimé est le nom d’un ou d’une
-candidate.  
+du vote sont stockés dans un tableau : chaque vote exprimé est le nom d’un ou d’une candidate.  
+
 Par exemple, les résultats pourraient correspondre au tableau :
 
 ```python
@@ -545,8 +542,7 @@ tab = [True, False, True, False, False, True, True]
 est un tel tableau, alors l’entier qu’il représente est $2^6 +2^4 + 2^1 + 2^0 = 83$. Cette représentation consistant à placer en premier le booléen indiquant la puissance la plus élevée de 2
 est dite *big-endian* ou grand-boutiste.
 
-Écrire une fonction `gb_vers_entier` qui prend en paramètre un tel tableau et renvoie
-l’entier qu’il représente.
+Écrire une fonction `gb_vers_entier` qui prend en paramètre un tel tableau et renvoie l’entier qu’il représente.
 
 ```python
 def gb_vers_entier(a):
@@ -565,20 +561,13 @@ assert gb_vers_entier([True, False, False, False, False, False, True, False])==1
 
 ## S_7.2
 
-La fonction `tri_insertion` suivante prend en argument un tableau `tab` et trie ce tableau en
-utilisant la méthode du tri par insertion. Compléter cette fonction pour qu'elle réponde à la
-spécification demandée.
+La fonction `tri_insertion` suivante prend en argument un tableau `tab` et trie ce tableau en utilisant la méthode du tri par insertion. Compléter cette fonction pour qu'elle réponde à la spécification demandée.
 
-On rappelle le principe du tri par insertion : on considère les éléments à trier un par un,
-le premier élément constituant, à lui tout seul, un tableau trié de longueur 1. On range
-ensuite le second élément pour constituer un tableau trié de longueur 2, puis on range le
-troisième élément pour avoir un tableau trié de longueur 3 et ainsi de suite...
+On rappelle le principe du tri par insertion : on considère les éléments à trier un par un,le premier élément constituant, à lui tout seul, un tableau trié de longueur 1. On range ensuite le second élément pour constituer un tableau trié de longueur 2, puis on range le troisième élément pour avoir un tableau trié de longueur 3 et ainsi de suite...
 
-A chaque étape, le premier élément du sous-tableau non trié est placé dans le sous-tableau
-des éléments déjà triés de sorte que ce sous-tableau demeure trié.
+A chaque étape, le premier élément du sous-tableau non trié est placé dans le sous-tableau des éléments déjà triés de sorte que ce sous-tableau demeure trié.
 
-Le principe du tri par insertion est donc d'insérer à la n-ième itération, le n-ième élément
-à la bonne place.
+Le principe du tri par insertion est donc d'insérer à la n-ième itération, le n-ième élément à la bonne place.
 
 
 ```python
@@ -643,18 +632,15 @@ nous connaissons bien.
 
 ![alt text](images/image-1.png)
 
-En parcourant en profondeur infixe l’arbre binaire ci-dessus, on
-retrouve l’expression notée habituellement :  
+En parcourant en profondeur infixe l’arbre binaire ci-dessus, on retrouve l’expression notée habituellement :  
 
 
 $$(3 \times (8 + 7)) − (2 + 1)$$
 
 
-La classe `Expr` ci-après permet d’implémenter une structure
-d’arbre binaire pour représenter de telles expressions.
+La classe `Expr` ci-après permet d’implémenter une structure d’arbre binaire pour représenter de telles expressions.
 
-Compléter la méthode récursive `infixe` qui renvoie une chaîne de caractères contenant
-des parenthèses représentant l’expression arithmétique sur laquelle on l’applique.
+Compléter la méthode récursive `infixe` qui renvoie une chaîne de caractères contenant des parenthèses représentant l’expression arithmétique sur laquelle on l’applique.
 
 
 ```python
@@ -701,18 +687,13 @@ assert e.infixe()=='((3*(8+7))-(2+1))'
 # Sujet_09
 ## S_9.1
 
-On veut trier par ordre croissant les notes d’une évaluation qui sont des nombres entiers
-compris entre 0 et 10 (inclus).
+On veut trier par ordre croissant les notes d’une évaluation qui sont des nombres entiers compris entre 0 et 10 (inclus).
 
 Ces notes sont contenues dans un tableau `notes_eval` (type `list`)
 
-Écrire une fonction `effectif_notes` prenant en paramètre le tableau `notes_eval` et
-renvoyant un tableau de longueur 11 tel que la valeur d’indice `i` soit le nombre de notes
-valant `i` dans le tableau `notes_eval`.
+Écrire une fonction `effectif_notes` prenant en paramètre le tableau `notes_eval` et renvoyant un tableau de longueur 11 tel que la valeur d’indice `i` soit le nombre de notes valant `i` dans le tableau `notes_eval`.
 
-Écrire ensuite une fonction `notes_triees` prenant en paramètre le tableau des effectifs
-des notes et renvoyant un tableau contenant les mêmes valeurs que `notes_eval` mais
-triées dans l’ordre croissant.
+Écrire ensuite une fonction `notes_triees` prenant en paramètre le tableau des effectifs des notes et renvoyant un tableau contenant les mêmes valeurs que `notes_eval` mais triées dans l’ordre croissant.
 
 ```python
 def effectif_notes(a):
@@ -734,10 +715,7 @@ assert notes_triees([2, 0, 1, 0, 1, 4, 2, 1, 0, 5, 1])==[0, 0, 2, 4, 5, 5, 5, 5,
 
 ## S_9.2
 
-L’objectif de cet exercice est d’écrire deux fonctions récursives `dec_to_bin` et
-`bin_to_dec` assurant respectivement la conversion de l’écriture décimale d’un nombre
-entier vers son écriture en binaire et, réciproquement, la conversion de l’écriture en
-binaire d’un nombre vers son écriture décimale.
+L’objectif de cet exercice est d’écrire deux fonctions récursives `dec_to_bin` et `bin_to_dec` assurant respectivement la conversion de l’écriture décimale d’un nombre entier vers son écriture en binaire et, réciproquement, la conversion de l’écriture en binaire d’un nombre vers son écriture décimale.
 
 Dans cet exercice, on s’interdit l’usage des fonctions Python `bin` et `int`.
 
@@ -765,9 +743,7 @@ On indique enfin qu’en Python si `mot = "informatique"` alors :
 caractères `mot` privée de son dernier caractère.
 
 Compléter, puis tester, les codes de deux fonctions ci-dessous. 
-On précise que la fonction récursive `dec_to_bin` prend en paramètre un nombre entier
-et renvoie une chaîne de caractères contenant l’écriture en binaire du nombre passé en
-paramètre.
+On précise que la fonction récursive `dec_to_bin` prend en paramètre un nombre entier et renvoie une chaîne de caractères contenant l’écriture en binaire du nombre passé en paramètre.
 
 ```python
 def dec_to_bin(nb_dec):
@@ -807,20 +783,16 @@ assert bin_to_dec('101010')==42
 # Sujet_10
 ## S_10.1
 
-Dans cet exercice on cherche à calculer la moyenne pondérée d’un élève dans une matière
-donnée. Chaque note est associée à un coefficient qui la pondère.
+Dans cet exercice on cherche à calculer la moyenne pondérée d’un élève dans une matière donnée. Chaque note est associée à un coefficient qui la pondère.
 
-Par exemple, si ses notes sont : 14 avec coefficient 3, 12 avec coefficient 1 et 16 avec coeffi-
-cient 2, sa moyenne pondérée sera donnée par
+Par exemple, si ses notes sont : 14 avec coefficient 3, 12 avec coefficient 1 et 16 avec coefficient 2, sa moyenne pondérée sera donnée par
 
 $$\dfrac{14 \times 3 + 12 \times 1 + 16 \times 2}{3+1+2}=14,333... $$
 
 Écrire une fonction `moyenne` :
 
-- qui prend en paramètre une liste notes non vide de tuples à deux éléments entiers
-de la forme `(note, coefficient)` (`int` ou `float`) positifs ou nuls ;
-- et qui renvoie la moyenne pondérée des notes de la liste sous forme de flottant si la
-somme des coefficients est non nulle, `None` sinon.
+- qui prend en paramètre une liste notes non vide de tuples à deux éléments entiers de la forme `(note, coefficient)` (`int` ou `float`) positifs ou nuls ;
+- et qui renvoie la moyenne pondérée des notes de la liste sous forme de flottant si la somme des coefficients est non nulle, `None` sinon.
 
 ```python
 def moyenne(a):
@@ -844,15 +816,11 @@ La figure « cœur » ci-dessus va servir d’exemple.
 On la représente par une grille de nombres, c’est-à-dire par une liste composée de sous-listes de même longueurs.
 Chaque sous-liste représentera donc une ligne du dessin.
 
-Dans le code ci-dessous, la fonction `affiche` permet d’afficher le dessin. Les pixels noirs
-(1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par
-deux espaces.
+Dans le code ci-dessous, la fonction `affiche` permet d’afficher le dessin. Les pixels noirs (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par deux espaces.
 
-La fonction `liste_zoom` prend en arguments une liste `liste_depart` et un entier `k`. Elle
-renvoie une liste où chaque élément de `liste_depart` est dupliqué `k` fois.
+La fonction `liste_zoom` prend en arguments une liste `liste_depart` et un entier `k`. Elle renvoie une liste où chaque élément de `liste_depart` est dupliqué `k` fois.
 
-La fonction `dessin_zoom` prend en argument la grille `dessin` et renvoie une grille où
-toutes les lignes de `dessin` sont zoomées `k` fois et répétées `k` fois.
+La fonction `dessin_zoom` prend en argument la grille `dessin` et renvoie une grille où toutes les lignes de `dessin` sont zoomées `k` fois et répétées `k` fois.
 
 Compléter les fonctions `liste_zoom` et `dessin_zoom` du code suivant :
 
@@ -908,50 +876,14 @@ coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 affiche(coeur)
 ```
 
-
-```markdown
-        * *       * *      
-     *     *   *     *    
-   *         *         *  
-   *                   *  
-   *                   *  
-     *               *    
-       *           *      
-         *       *        
-           *   *          
-             *
-```
-          
+![alt text](images/coeur_1.png)
 
 
 ```python
 affiche(dessin_zoom(coeur,2))
 ```
 
-```markdown
-
-
-             * * * *             * * * *            
-             * * * *             * * * *            
-         * *         * *     * *         * *        
-         * *         * *     * *         * *        
-     * *                 * *                 * *    
-     * *                 * *                 * *    
-     * *                                     * *    
-     * *                                     * *    
-     * *                                     * *    
-     * *                                     * *    
-         * *                             * *        
-         * *                             * *        
-             * *                     * *            
-             * *                     * *            
-                 * *             * *                
-                 * *             * *                
-                     * *     * *                    
-                     * *     * *                    
-                         * *                        
-                         * *                        
-```
+![alt text](images/coeur_2.png)
 
 ```python
 assert liste_zoom([1,2,3],3)==[1, 1, 1, 2, 2, 2, 3, 3, 3]
@@ -962,16 +894,13 @@ assert liste_zoom([1,2,3],3)==[1, 1, 1, 2, 2, 2, 3, 3, 3]
 
 Dans cet exercice, on considère des phrases composées de mots.
 
-- On appelle « mot » une chaîne de caractères composée avec des caractères choisis
-parmi les 26 lettres minuscules ou majuscules de l'alphabet,
+- On appelle « mot » une chaîne de caractères composée avec des caractères choisis parmi les 26 lettres minuscules ou majuscules de l'alphabet,
 
 - On appelle *phrase* une chaîne de caractères :
-    - composée avec un ou plusieurs *mots* séparés entre eux par un seul
-caractère espace `' '`,
+    - composée avec un ou plusieurs *mots* séparés entre eux par un seul caractère espace `' '`,
     - se finissant :
         - soit par un point `'.'` qui est alors collé au dernier mot,
-        - soit par un point d'exclamation `'!'` ou d'interrogation `'?'` qui est alors
-séparé du dernier mot par un seul caractère espace `' '`.
+        - soit par un point d'exclamation `'!'` ou d'interrogation `'?'` qui est alors séparé du dernier mot par un seul caractère espace `' '`.
 
 Voici deux exemples de phrases :
 
@@ -1052,10 +981,8 @@ entiers (type `list`) et qui le modifie afin qu’il soit trié par ordre croiss
 
 On utilisera l’algorithme suivant :
 
-- on recherche le plus petit élément du tableau, en le parcourant du rang 0 au dernier
-rang, et on l’échange avec l’élément d’indice 0 ;
-- on recherche ensuite le plus petit élément du tableau restreint du rang 1 au dernier
-rang, et on l’échange avec l’élément d’indice 1 ;
+- on recherche le plus petit élément du tableau, en le parcourant du rang 0 au dernier rang, et on l’échange avec l’élément d’indice 0 ;
+- on recherche ensuite le plus petit élément du tableau restreint du rang 1 au dernier rang, et on l’échange avec l’élément d’indice 1 ;
 - on continue de cette façon jusqu’à ce que le tableau soit entièrement trié.
 
 ```python
@@ -1077,10 +1004,8 @@ Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 
 Une élève de NSI décide de le coder en langage Python de la manière suivante :
 
 - le programme génère un nombre entier aléatoire compris entre 1 et 99 ;
-- si la proposition de l’utilisatrice est plus petite que le nombre cherché, l’utilisatrice en
-est avertie. Elle peut alors en tester un autre ;
-- si la proposition de l’utilisatrice est plus grande que le nombre cherché, l’utilisatrice en
-est avertie. Elle peut alors en tester un autre ;
+- si la proposition de l’utilisatrice est plus petite que le nombre cherché, l’utilisatrice en est avertie. Elle peut alors en tester un autre ;
+- si la proposition de l’utilisatrice est plus grande que le nombre cherché, l’utilisatrice en est avertie. Elle peut alors en tester un autre ;
 - si l’utilisatrice trouve le bon nombre en 10 essais ou moins, elle gagne ;
 - si l’utilisatrice a fait plus de 10 essais sans trouver le bon nombre, elle perd.
 
@@ -1162,6 +1087,7 @@ def insere(tab, a):
         i = ... 
     return tab_a
 ```
+
 Compléter la fonction insere ci-dessus.
 
 Exemples :
@@ -1213,7 +1139,7 @@ est correct.
 
 On rappelle que l’instruction
 
-`assert condition, message``
+`assert condition, message`
 
 permet de vérifier que la condition est vraie. Si ce n’est pas le cas, le programme s’arrête et affiche le message d’erreur fourni.
 
@@ -1252,17 +1178,16 @@ class Paquet_de_cartes:
 
 Exemple :
 
-```markdown
->>>> jeu = Paquet_de_cartes()
->>>> carte1 = jeu.recuperer_carte(20)
->>>> carte1.recuperer_valeur() + " de " + carte1.recuperer_couleur()
-"8 de coeur"
->>>> carte2 = jeu.recuperer_carte(0)
->>>> carte2.recuperer_valeur() + " de " + carte2.recuperer_couleur()
-"As de pique"
->>>> carte3 = jeu.recuperer_carte(52)
-AssertionError : paramètre pos invalide
-```
+`>>>> jeu = Paquet_de_cartes()`  
+`>>>> carte1 = jeu.recuperer_carte(20)`  
+`>>>> carte1.recuperer_valeur() + " de " + carte1.recuperer_couleur()`  
+`"8 de coeur"`  
+`>>>> carte2 = jeu.recuperer_carte(0)`  
+`>>>> carte2.recuperer_valeur() + " de " + carte2.recuperer_couleur()`  
+`"As de pique"`  
+`>>>> carte3 = jeu.recuperer_carte(52)`  
+`AssertionError : paramètre pos invalide` 
+
 
 # Sujet_15
 ## S_15.1
@@ -1364,10 +1289,8 @@ placer le minimum en première position.
 
 Exemple : pour trier le tableau `[7, 9, 4, 3]` :
 
-- première étape : 7 et 9 ne sont pas échangés, puis 9 et 4 sont échangés, puis 9 et
-3 sont échangés, le tableau est alors `[7, 4, 3, 9]`
-- deuxième étape : 7 et 4 sont échangés, puis 7 et 3 sont échangés, le tableau est
-alors `[4, 3, 7, 9]`
+- première étape : 7 et 9 ne sont pas échangés, puis 9 et 4 sont échangés, puis 9 et 3 sont échangés, le tableau est alors `[7, 4, 3, 9]`
+- deuxième étape : 7 et 4 sont échangés, puis 7 et 3 sont échangés, le tableau est alors `[4, 3, 7, 9]`
 - troisième étape : 4 et 3 sont échangés, le tableau est alors `[3, 4, 7, 9]`
 
 
@@ -1522,18 +1445,13 @@ assert chercher([1, 5, 6, 6, 9, 12], 6, 0, 5)==2
 On rappelle que :
 
 - le nombre $a^n$ est le nombre $a \times a \times a \times \dots \times a$, où le facteur $a$ apparaît $n$ fois,
-- en langage Python, l’instruction `t[-1]` permet d’accéder au dernier élément du
-tableau `t`.
+- en langage Python, l’instruction `t[-1]` permet d’accéder au dernier élément du tableau `t`.
 
 Dans cet exercice, l’opérateur ```**```  et la fonction `pow` ne sont pas autorisés.
 
-Programmer en langage Python une fonction `liste_puissances` qui prend en arguments
-un nombre entier `a`, un entier strictement positif `n` et qui renvoie la liste de ses puissances
-$\rm{[a^1, a^2, ..., a^n]}$.
+Programmer en langage Python une fonction `liste_puissances` qui prend en arguments un nombre entier `a`, un entier strictement positif `n` et qui renvoie la liste de ses puissances $\rm{[a^1, a^2, ..., a^n]}$.
 
-Programmer également une fonction `liste_puisssances_borne` qui prend en
-arguments un nombre entier `a` supérieur ou égal à 2 et un entier `borne`, et qui renvoie la
-liste de ses puissances, à l’exclusion de $\rm{a^0}$, strictement inférieures à `borne`.
+Programmer également une fonction `liste_puisssances_borne` qui prend en arguments un nombre entier `a` supérieur ou égal à 2 et un entier `borne`, et qui renvoie la liste de ses puissances, à l’exclusion de $\rm{a^0}$, strictement inférieures à `borne`.
 
 ```python
 def liste_puissances(a, b):
@@ -1716,6 +1634,7 @@ def binaire(image, seuil):
                 nouvelle_image[i][j] = ... 
     return nouvelle_image
 ```
+
 Exemples :
 
 ```python
@@ -2036,5 +1955,8 @@ assert somme_max([1, -2, 3, 10, -4, 7, 2, -5])==18
 ```
 
 
+\>>>>> test 
 
+
+>>>>> test 
 
