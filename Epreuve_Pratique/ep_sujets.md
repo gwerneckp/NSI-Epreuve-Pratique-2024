@@ -1953,10 +1953,3 @@ assert somme_max([1, 2, -3, 4, 5])==9
 assert somme_max([1, 2, -2, 4, 5])==10
 assert somme_max([1, -2, 3, 10, -4, 7, 2, -5])==18
 ```
-
-
-\>>>>> test 
-
-
->>>>> test 
-
