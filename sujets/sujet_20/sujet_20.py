@@ -5,6 +5,7 @@ def lancer(n):
 def paire_6(tab):
     pass
 
+
 def nombre_lignes(image):
     """renvoie le nombre de lignes de l'image"""
     return ...
@@ -43,20 +44,3 @@ def binaire(image, seuil):
             else:
                 nouvelle_image[i][j] = ...
     return nouvelle_image
-
-img = [
-    [20, 34, 254, 145, 6],
-    [23, 124, 237, 225, 69],
-    [197, 174, 207, 25, 87],
-    [255, 0, 24, 197, 189],
-]
-    [235, 221, 1, 110, 249],
-    [232, 131, 18, 30, 186],
-    [58, 81, 48, 230, 168],
-    [0, 255, 231, 58, 66],
-]
-    [0, 0, 1, 1, 0],
-    [0, 1, 1, 1, 0],
-    [1, 1, 1, 0, 0],
-    [1, 0, 0, 1, 1],
-]
