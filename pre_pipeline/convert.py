@@ -50,7 +50,7 @@ def format_python_code(content: list) -> list:
             formatted_code = format_file_contents(code, fast=False, mode=FileMode())
             logging.info("Successfully formatted Python code block.")
         except Exception as e:
-            logging.error(f"Error formatting Python code: {e}")
+            logging.warning(f"Error formatting Python code: {e}")
             formatted_code = code
         return f"```python\n{formatted_code.strip()}\n```"
 
@@ -127,7 +127,7 @@ def remove_asserts_and_format(code: str) -> str:
     try:
         return format_file_contents(filtered_code, fast=False, mode=FileMode())
     except Exception as e:
-        logging.error(f"Error reformatting Python code after removing asserts: {e}")
+        logging.warning(f"Error reformatting Python code after removing asserts: {e}")
         return filtered_code
 
 
