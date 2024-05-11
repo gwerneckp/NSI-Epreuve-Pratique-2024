@@ -17,12 +17,3 @@ def est_cyclique(plan):
         nb_destinataires = ...
 
     return nb_destinataires == ...
-
-    est_cyclique({"A": "E", "F": "A", "C": "D", "E": "B", "B": "F", "D": "C"}) == False
-)
-    est_cyclique({"A": "E", "F": "C", "C": "D", "E": "B", "B": "F", "D": "A"}) == True
-)
-    est_cyclique({"A": "B", "F": "C", "C": "D", "E": "A", "B": "F", "D": "E"}) == True
-)
-    est_cyclique({"A": "B", "F": "A", "C": "D", "E": "C", "B": "F", "D": "E"}) == False
-)
