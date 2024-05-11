@@ -1,5 +1,5 @@
 # Sujet_03
-## S_3.1
+## Exercice 1
 
 Écrire la fonction `maximum_tableau`, prenant en paramètre un tableau non vide de nombres `tab` (de type
 `list`) et renvoyant le plus grand élément de ce tableau.
@@ -17,7 +17,7 @@ assert maximum_tableau([98, 12, 104, 23, 131, 9]) == 131
 assert maximum_tableau([-27, 24, -3, 15]) == 24
 ```
 
-## S_3.2
+## Exercice 2
 
 On dispose de chaînes de caractères contenant uniquement des parenthèses ouvrantes et fermantes. 
 
