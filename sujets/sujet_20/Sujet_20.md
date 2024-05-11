@@ -1,5 +1,5 @@
 # Sujet_20
-## S_20.1
+## Exercice 1
 
 Dans cet exercice les tableaux sont représentés par des listes Python (type `list`).
 
@@ -42,7 +42,7 @@ Exemples :
 `>>>> paire_6(lancer4)`  
 `False`
 
-## S_20.2
+## Exercice 2
 
 On considère une image en 256 niveaux de gris que l'on représente par une grille de
 nombres, c'est-à-dire une liste composée de sous-listes toutes de longueurs identiques.
