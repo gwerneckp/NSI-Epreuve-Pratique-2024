@@ -118,6 +118,19 @@ def handle_image_copy(image_path: str, directory: str) -> None:
         logging.warning(f"Image source path does not exist: {source_path}")
 
 
+def remove_asserts_and_format(code: str) -> str:
+    """Remove assert statements from Python code and reformat using Black."""
+    lines = code.splitlines()
+    filtered_code = "\n".join(
+        line for line in lines if not line.strip().startswith("assert")
+    )
+    try:
+        return format_file_contents(filtered_code, fast=False, mode=FileMode())
+    except Exception as e:
+        logging.error(f"Error reformatting Python code after removing asserts: {e}")
+        return filtered_code
+
+
 def markdown_pipeline(filename: str) -> None:
     """Process Markdown file: format code, split by headers, handle images."""
     content = read_file(filename)
@@ -133,6 +146,7 @@ def markdown_pipeline(filename: str) -> None:
         )
         # Extract and write Python code to files
         python_code = extract_python_code(replaced_section)
+        python_code = remove_asserts_and_format(python_code)
         with open(
             os.path.join(directory_name, f"sujet_{sujet_number}.py"), "w"
         ) as py_file:
