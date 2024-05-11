@@ -1,9 +1,16 @@
 from unittest import TestCase, main
-from functools import reduce
+
+# from functools import reduce
 
 
 def maximum_tableau(tab: list[int]) -> int:
-    return reduce(lambda new, acc: new if new > acc else acc, tab, float("-inf"))
+    # return reduce(lambda new, acc: new if new > acc else acc, tab, float("-inf"))
+    max_v = tab[0]
+    for v in tab[1::]:
+        if v > max_v:
+            max_v = v
+
+    return max_v
 
 
 class Pile:
