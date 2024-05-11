@@ -14,7 +14,7 @@ def recherche(tab: list[int], n: int) -> Optional[int]:
     return last_i
 
 
-def distance_carre(point1: tuple[int, int], point2: tuple[int, int]):
+def distance_carre(point1: tuple[int, int], point2: tuple[int, int]) -> int:
     """Calcule et renvoie la distance au carre entre
     deux points."""
 
@@ -36,27 +36,27 @@ def point_le_plus_proche(
 
 
 class TestSujet04(TestCase):
-    def test_recherche_none(self):
+    def test_recherche_none(self) -> None:
         self.assertIsNone(recherche([5, 3], 1))
 
-    def test_recherche_i_0(self):
+    def test_recherche_i_0(self) -> None:
         self.assertEqual(recherche([2, 4], 2), 0)
 
-    def test_recherche_i_3(self):
+    def test_recherche_i_3(self) -> None:
         self.assertEqual(recherche([2, 3, 5, 2, 4], 2), 3)
 
-    def test_distance_1(self):
+    def test_distance_1(self) -> None:
         self.assertEqual(distance_carre((1, 0), (5, 3)), 25)
 
-    def test_distance_2(self):
+    def test_distance_2(self) -> None:
         self.assertEqual(distance_carre((1, 0), (0, 1)), 2)
 
-    def test_point_plus_proche_1(self):
+    def test_point_plus_proche_1(self) -> None:
         self.assertTupleEqual(
             point_le_plus_proche((0, 0), [(7, 9), (2, 5), (5, 2)]), (2, 5)
         )
 
-    def test_point_plus_proche_2(self):
+    def test_point_plus_proche_2(self) -> None:
         self.assertTupleEqual(
             point_le_plus_proche((5, 2), [(7, 9), (2, 5), (5, 2)]), (5, 2)
         )
