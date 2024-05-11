@@ -1,5 +1,5 @@
 # Sujet_05
-## S_5.1
+## Exercice 1
 
 Écrire une fonction `max_et_indice` qui prend en paramètre un tableau non vide `tab` de
 nombres entiers et qui renvoie la valeur du plus grand élément de ce tableau ainsi que
@@ -21,7 +21,7 @@ assert max_et_indice([-1, -1, 3, 3, 3]) == (3, 2)
 assert max_et_indice([1, 1, 1, 1]) == (1, 0)
 ```
 
-## S_5.2
+## Exercice 2
 
 L'ordre des gènes sur un chromosome est représenté par un tableau `ordre` de `n` cases
 d'entiers distincts deux à deux et compris entre 1 et `n`.
