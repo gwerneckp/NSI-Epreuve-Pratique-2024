@@ -2,13 +2,13 @@
 
 ## s_1.1
 
-Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d’un
-dictionnaire où les clefs sont les caractères des nœuds de l’arbre et les valeurs, pour
+Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d'un
+dictionnaire où les clefs sont les caractères des nœuds de l'arbre et les valeurs, pour
 chaque clef, la liste des caractères des fils gauche et droit du nœud.
 
 On utilise la valeur `''` pour représenter un fils vide.
 
-Par exemple, l’arbre
+Par exemple, l'arbre
 
 ![alt text](images/image.png)
 
@@ -26,12 +26,12 @@ def taille(arbre, lettre):
 ```
 
 Écrire une fonction récursive `taille` prenant en paramètres un arbre binaire `arbre` non vide
-sous la forme d’un dictionnaire et un caractère `lettre` qui est la valeur du sommet de
-l’arbre, et qui renvoie la taille de l’arbre à savoir le nombre total de nœuds.
+sous la forme d'un dictionnaire et un caractère `lettre` qui est la valeur du sommet de
+l'arbre, et qui renvoie la taille de l'arbre à savoir le nombre total de nœuds.
 
 On observe que, par exemple, `arbre[lettre][0]`, respectivement
-`arbre[lettre][1]`, permet d’atteindre la clé du sous-arbre gauche, respectivement
-droit, de l’arbre `arbre` de sommet `lettre`.
+`arbre[lettre][1]`, permet d'atteindre la clé du sous-arbre gauche, respectivement
+droit, de l'arbre `arbre` de sommet `lettre`.
 
 Exemple :
 ```python
@@ -147,21 +147,21 @@ première.
 Sur le plan d'envoi `plan_a` des messages ci-dessus, il y a deux cycles distincts : un premier
 cycle avec A, E, B, F et un second cycle avec C et D.
 
-En revanche, le plan d’envoi `plan_b` ci-dessous :
+En revanche, le plan d'envoi `plan_b` ci-dessous :
 
 `plan_b = {'A':'C', 'B':'F', 'C':'E', 'D':'A', 'E':'B', 'F':'D'}`
 
-comporte un unique cycle : A, C, E, B, F, D. Dans ce cas, lorsqu’un plan d’envoi comporte un
-*unique cycle*, on dit que le plan d’envoi est *cyclique*.
+comporte un unique cycle : A, C, E, B, F, D. Dans ce cas, lorsqu'un plan d'envoi comporte un
+*unique cycle*, on dit que le plan d'envoi est *cyclique*.
 
 Pour savoir si un plan d'envoi de messages comportant N personnes est cyclique, on peut
 utiliser l'algorithme ci-dessous :
 
 
-- on part d’un expéditeur (ici A) et on inspecte son destinataire dans le plan d'envoi,
-- chaque destinataire devient à son tour expéditeur, selon le plan d’envoi, tant
-qu’on ne « retombe » pas sur l’expéditeur initial,
-- le plan d’envoi est cyclique si on l’a parcouru en entier.
+- on part d'un expéditeur (ici A) et on inspecte son destinataire dans le plan d'envoi,
+- chaque destinataire devient à son tour expéditeur, selon le plan d'envoi, tant
+qu'on ne « retombe » pas sur l'expéditeur initial,
+- le plan d'envoi est cyclique si on l'a parcouru en entier.
 
 
 Compléter la fonction `est_cyclique` en respectant la spécification.
@@ -249,7 +249,7 @@ class Pile:
     def depiler(self):
         """
         Retire et renvoie l'élément placé au sommet de la pile,
-        si la pile n’est pas vide. Produit une erreur sinon.
+        si la pile n'est pas vide. Produit une erreur sinon.
         """
         assert not self.est_vide()
         return self.contenu.pop()
@@ -257,14 +257,14 @@ class Pile:
 
 On souhaite programmer une fonction bon_parenthesage qui prend en paramètre une chaîne de caractères ch formée de parenthèses et renvoie True si la chaîne est bien parenthésée et False sinon.
 
-Cette fonction utilise une pile et suit le principe suivant : en parcourant la chaîne de gauche à droite, si on trouve une parenthèse ouvrante, on l’empile au sommet de la pile et si on trouve une parenthèse fermante, on dépile (si possible) la parenthèse ouvrante stockée au sommet de la pile.
+Cette fonction utilise une pile et suit le principe suivant : en parcourant la chaîne de gauche à droite, si on trouve une parenthèse ouvrante, on l'empile au sommet de la pile et si on trouve une parenthèse fermante, on dépile (si possible) la parenthèse ouvrante stockée au sommet de la pile.
 
 La chaîne est alors bien parenthésée si, à la fin du parcours, la pile est vide.
 
 Elle est, par contre, mal parenthésée :
 
 si dans le parcours, on trouve une parenthèse fermante, alors que la pile est vide ;
-ou si, à la fin du parcours, la pile n’est pas vide.
+ou si, à la fin du parcours, la pile n'est pas vide.
 Compléter le code de la fonction bon_parenthesage ci-dessous:
 
 ```python
@@ -323,7 +323,7 @@ $$d^2=(x-x')^2+(y-y')^2$$
 
 
 
-Compléter le code des fonctions `distance_carre` et `point_le_plus_proche` fournies ci-dessous pour qu’elles répondent à leurs spécifications.
+Compléter le code des fonctions `distance_carre` et `point_le_plus_proche` fournies ci-dessous pour qu'elles répondent à leurs spécifications.
 
 ```python
 def distance_carre(point1, point2):
@@ -357,9 +357,9 @@ assert point_le_plus_proche((5, 2), [(7, 9), (2, 5), (5, 2)])==(5, 2)
 
 Écrire une fonction `max_et_indice` qui prend en paramètre un tableau non vide `tab` de
 nombres entiers et qui renvoie la valeur du plus grand élément de ce tableau ainsi que
-l’indice de sa première apparition dans ce tableau.
+l'indice de sa première apparition dans ce tableau.
 
-L’utilisation de la fonction native `max` n’est pas autorisée.
+L'utilisation de la fonction native `max` n'est pas autorisée.
 
 ```python
 def max_et_indice(a):
@@ -377,23 +377,23 @@ assert max_et_indice([1, 1, 1, 1])==(1, 0)
 
 ## S_5.2
 
-L’ordre des gènes sur un chromosome est représenté par un tableau `ordre` de `n` cases
-d’entiers distincts deux à deux et compris entre 1 et `n`.
+L'ordre des gènes sur un chromosome est représenté par un tableau `ordre` de `n` cases
+d'entiers distincts deux à deux et compris entre 1 et `n`.
 
 Par exemple, `ordre = [5, 4, 3, 6, 7, 2, 1, 8, 9]` dans le cas `n = 9`.
 
-On dit qu’il y a un point de rupture dans `ordre` dans chacune des situations suivantes :
+On dit qu'il y a un point de rupture dans `ordre` dans chacune des situations suivantes :
 
-- la première valeur de `ordre` n’est pas 1 ;
-- l’écart entre deux gènes consécutifs n’est pas égal à 1 ;
-- la dernière valeur de `ordre` n’est pas n.
+- la première valeur de `ordre` n'est pas 1 ;
+- l'écart entre deux gènes consécutifs n'est pas égal à 1 ;
+- la dernière valeur de `ordre` n'est pas n.
 
 Par exemple, si `ordre = [5, 4, 3, 6, 7, 2, 1, 8, 9]` avec `n = 9`, on a
 
 - un point de rupture au début car 5 est différent de 1
-- un point de rupture entre 3 et 6 (l’écart est de 3)
-- un point de rupture entre 7 et 2 (l’écart est de 5)
-- un point de rupture entre 1 et 8 (l’écart est de 7)
+- un point de rupture entre 3 et 6 (l'écart est de 3)
+- un point de rupture entre 7 et 2 (l'écart est de 5)
+- un point de rupture entre 1 et 8 (l'écart est de 7)
 
 Il y a donc 4 points de rupture.
 
@@ -403,7 +403,7 @@ proposées à la page suivante pour que :
 
 - la fonction `est_un_ordre` renvoie `True` si le tableau passé en paramètre représente bien un ordre de gènes de chromosome et `False` sinon ;
 
-- la fonction `nombre_points_rupture` renvoie le nombre de points de rupture d’un tableau passé en paramètre représentant l’ordre de gènes d’un chromosome.
+- la fonction `nombre_points_rupture` renvoie le nombre de points de rupture d'un tableau passé en paramètre représentant l'ordre de gènes d'un chromosome.
 
 ```python
 def est_un_ordre(tab):
@@ -456,7 +456,7 @@ assert nombre_points_rupture([2, 1, 3, 4])==2
 # Sujet_06
 ## S_6.1
 
-Écrire une fonction `verifie` qui prend en paramètre un tableau de valeurs numériques et qui renvoie `True` si ce tableau est trié dans l’ordre croissant, `False` sinon.
+Écrire une fonction `verifie` qui prend en paramètre un tableau de valeurs numériques et qui renvoie `True` si ce tableau est trié dans l'ordre croissant, `False` sinon.
 
 Un tableau vide est considéré comme trié.
 
@@ -478,8 +478,8 @@ assert verifie([5])==True
 
 ## S_6.2
 
-On considère dans cet exercice l’élection d’un vainqueur à l’issue d’un vote. Les résultats
-du vote sont stockés dans un tableau : chaque vote exprimé est le nom d’un ou d’une candidate.  
+On considère dans cet exercice l'élection d'un vainqueur à l'issue d'un vote. Les résultats
+du vote sont stockés dans un tableau : chaque vote exprimé est le nom d'un ou d'une candidate.  
 
 Par exemple, les résultats pourraient correspondre au tableau :
 
@@ -489,10 +489,10 @@ urne = ['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']
 
 indiquant que 3 candidats ont obtenu au moins un vote chacun : A, B et C.
 
-On cherche à déterminer le ou les candidats ayant obtenu le plus de suffrages. Pour cela, on propose d’écrire deux fonctions :
+On cherche à déterminer le ou les candidats ayant obtenu le plus de suffrages. Pour cela, on propose d'écrire deux fonctions :
 
 - La fonction depouille doit permettre de compter le nombre de votes exprimés pour chaque artiste. Elle prend en paramètre un tableau et renvoie le résultat dans un dictionnaire dont les clés sont les noms des issues et les valeurs le nombre de votes en leur faveur.
-- La fonction vainqueurs doit désigner le nom du ou des gagnants. Elle prend en paramètre un dictionnaire non vide dont la structure est celle du dictionnaire renvoyé par la fonction depouille et renvoie un tableau. Ce tableau peut donc contenir plusieurs éléments s’il y a des artistes ex- aequo. Compléter les fonctions depouille et vainqueurs ci-après pour qu’elles renvoient les résultats attendus.
+- La fonction vainqueurs doit désigner le nom du ou des gagnants. Elle prend en paramètre un dictionnaire non vide dont la structure est celle du dictionnaire renvoyé par la fonction depouille et renvoie un tableau. Ce tableau peut donc contenir plusieurs éléments s'il y a des artistes ex- aequo. Compléter les fonctions depouille et vainqueurs ci-après pour qu'elles renvoient les résultats attendus.
 
 ```python
 def depouille(urne):
@@ -517,7 +517,7 @@ def vainqueurs(election):
     return ...
 ```
 
-Exemples d’utilisation :
+Exemples d'utilisation :
 
 ```python
 assert depouille([ 'A', 'B', 'A' ])=={'A': 2, 'B': 1}
@@ -530,7 +530,7 @@ assert vainqueurs({ 'A' : 2, 'B' : 2, 'C' : 1})==['A', 'B']
 # Sujet_07
 ## S_7.1
 
-On considère dans cet exercice une représentation binaire d’un entier non signé en tant que
+On considère dans cet exercice une représentation binaire d'un entier non signé en tant que
 tableau de booléens.
 Si
 
@@ -538,10 +538,10 @@ Si
 tab = [True, False, True, False, False, True, True]
 ```
 
-est un tel tableau, alors l’entier qu’il représente est $2^6 +2^4 + 2^1 + 2^0 = 83$. Cette représentation consistant à placer en premier le booléen indiquant la puissance la plus élevée de 2
+est un tel tableau, alors l'entier qu'il représente est $2^6 +2^4 + 2^1 + 2^0 = 83$. Cette représentation consistant à placer en premier le booléen indiquant la puissance la plus élevée de 2
 est dite *big-endian* ou grand-boutiste.
 
-Écrire une fonction `gb_vers_entier` qui prend en paramètre un tel tableau et renvoie l’entier qu’il représente.
+Écrire une fonction `gb_vers_entier` qui prend en paramètre un tel tableau et renvoie l'entier qu'il représente.
 
 ```python
 def gb_vers_entier(a):
@@ -598,7 +598,7 @@ assert tri_insertion([98, 12, 104, 23, 131, 9])==[9, 12, 23, 98, 104, 131]
 ## S_8.1
 
 Le codage par différence (*delta encoding* en anglais) permet de compresser un tableau
-d’entiers dont les valeurs sont proches les unes des autres. Le principe est de stocker la
+d'entiers dont les valeurs sont proches les unes des autres. Le principe est de stocker la
 première donnée en indiquant pour chaque autre donnée sa différence avec la précédente
 plutôt que la donnée elle-même.
 
@@ -607,7 +607,7 @@ moins de place en mémoire. Cette méthode se révèle efficace lorsque les vale
 sont proches.
 
 Programmer la fonction `delta(liste)` qui prend en paramètre un tableau non vide de nombres entiers
-et qui renvoie un tableau contenant les valeurs entières compressées à l’aide cette technique.
+et qui renvoie un tableau contenant les valeurs entières compressées à l'aide cette technique.
 
 ```python
 def delta(a):
@@ -625,21 +625,21 @@ assert delta([42])==[42]
 ## S_8.2
 
 Une expression arithmétique ne comportant que les quatre opérations +, −, ×, ÷ peut être
-représentée sous forme d’arbre binaire. Les nœuds internes sont des opérateurs et les feuilles
+représentée sous forme d'arbre binaire. Les nœuds internes sont des opérateurs et les feuilles
 sont des nombres. Dans un tel arbre, la disposition des nœuds joue le rôle des parenthèses que
 nous connaissons bien.  
 
 ![alt text](images/image-1.png)
 
-En parcourant en profondeur infixe l’arbre binaire ci-dessus, on retrouve l’expression notée habituellement :  
+En parcourant en profondeur infixe l'arbre binaire ci-dessus, on retrouve l'expression notée habituellement :  
 
 
 $$(3 \times (8 + 7)) − (2 + 1)$$
 
 
-La classe `Expr` ci-après permet d’implémenter une structure d’arbre binaire pour représenter de telles expressions.
+La classe `Expr` ci-après permet d'implémenter une structure d'arbre binaire pour représenter de telles expressions.
 
-Compléter la méthode récursive `infixe` qui renvoie une chaîne de caractères contenant des parenthèses représentant l’expression arithmétique sur laquelle on l’applique.
+Compléter la méthode récursive `infixe` qui renvoie une chaîne de caractères contenant des parenthèses représentant l'expression arithmétique sur laquelle on l'applique.
 
 
 ```python
@@ -686,13 +686,13 @@ assert e.infixe()=='((3*(8+7))-(2+1))'
 # Sujet_09
 ## S_9.1
 
-On veut trier par ordre croissant les notes d’une évaluation qui sont des nombres entiers compris entre 0 et 10 (inclus).
+On veut trier par ordre croissant les notes d'une évaluation qui sont des nombres entiers compris entre 0 et 10 (inclus).
 
 Ces notes sont contenues dans un tableau `notes_eval` (type `list`)
 
-Écrire une fonction `effectif_notes` prenant en paramètre le tableau `notes_eval` et renvoyant un tableau de longueur 11 tel que la valeur d’indice `i` soit le nombre de notes valant `i` dans le tableau `notes_eval`.
+Écrire une fonction `effectif_notes` prenant en paramètre le tableau `notes_eval` et renvoyant un tableau de longueur 11 tel que la valeur d'indice `i` soit le nombre de notes valant `i` dans le tableau `notes_eval`.
 
-Écrire ensuite une fonction `notes_triees` prenant en paramètre le tableau des effectifs des notes et renvoyant un tableau contenant les mêmes valeurs que `notes_eval` mais triées dans l’ordre croissant.
+Écrire ensuite une fonction `notes_triees` prenant en paramètre le tableau des effectifs des notes et renvoyant un tableau contenant les mêmes valeurs que `notes_eval` mais triées dans l'ordre croissant.
 
 ```python
 def effectif_notes(a):
@@ -714,11 +714,11 @@ assert notes_triees([2, 0, 1, 0, 1, 4, 2, 1, 0, 5, 1])==[0, 0, 2, 4, 5, 5, 5, 5,
 
 ## S_9.2
 
-L’objectif de cet exercice est d’écrire deux fonctions récursives `dec_to_bin` et `bin_to_dec` assurant respectivement la conversion de l’écriture décimale d’un nombre entier vers son écriture en binaire et, réciproquement, la conversion de l’écriture en binaire d’un nombre vers son écriture décimale.
+L'objectif de cet exercice est d'écrire deux fonctions récursives `dec_to_bin` et `bin_to_dec` assurant respectivement la conversion de l'écriture décimale d'un nombre entier vers son écriture en binaire et, réciproquement, la conversion de l'écriture en binaire d'un nombre vers son écriture décimale.
 
-Dans cet exercice, on s’interdit l’usage des fonctions Python `bin` et `int`.
+Dans cet exercice, on s'interdit l'usage des fonctions Python `bin` et `int`.
 
-L'exemple suivant montre comment obtenir l’écriture en binaire du
+L'exemple suivant montre comment obtenir l'écriture en binaire du
 nombre 25 :
 
 $25 =  2 \times 12 + 1$  
@@ -735,14 +735,14 @@ L'écriture binaire de 25 est donc ```11001```.
 - `a // 2` renvoie le quotient de la division euclidienne de `a` par 2.
 - ` a % 2` renvoie le reste dans la division euclidienne de `a` par 2.
 
-On indique enfin qu’en Python si `mot = "informatique"` alors :
+On indique enfin qu'en Python si `mot = "informatique"` alors :
 
-- `mot[-1]` renvoie `'e'`, c’est-à-dire le dernier caractère de la chaîne de caractères `mot`.
-- `mot[:-1]` renvoie `'informatiqu'` , c’est-à-dire l’ensemble de la chaîne de
+- `mot[-1]` renvoie `'e'`, c'est-à-dire le dernier caractère de la chaîne de caractères `mot`.
+- `mot[:-1]` renvoie `'informatiqu'` , c'est-à-dire l'ensemble de la chaîne de
 caractères `mot` privée de son dernier caractère.
 
 Compléter, puis tester, les codes de deux fonctions ci-dessous. 
-On précise que la fonction récursive `dec_to_bin` prend en paramètre un nombre entier et renvoie une chaîne de caractères contenant l’écriture en binaire du nombre passé en paramètre.
+On précise que la fonction récursive `dec_to_bin` prend en paramètre un nombre entier et renvoie une chaîne de caractères contenant l'écriture en binaire du nombre passé en paramètre.
 
 ```python
 def dec_to_bin(nb_dec):
@@ -773,7 +773,7 @@ Exemple :
 assert dec_to_bin(25)=='11001'
 ```
 
-La fonction récursive bin_to_dec prend en paramètre une chaîne de caractères représentant l’écriture d’un nombre en binaire et renvoie l’écriture décimale de ce nombre.
+La fonction récursive bin_to_dec prend en paramètre une chaîne de caractères représentant l'écriture d'un nombre en binaire et renvoie l'écriture décimale de ce nombre.
 
 ```python
 assert bin_to_dec('101010')==42
@@ -782,7 +782,7 @@ assert bin_to_dec('101010')==42
 # Sujet_10
 ## S_10.1
 
-Dans cet exercice on cherche à calculer la moyenne pondérée d’un élève dans une matière donnée. Chaque note est associée à un coefficient qui la pondère.
+Dans cet exercice on cherche à calculer la moyenne pondérée d'un élève dans une matière donnée. Chaque note est associée à un coefficient qui la pondère.
 
 Par exemple, si ses notes sont : 14 avec coefficient 3, 12 avec coefficient 1 et 16 avec coefficient 2, sa moyenne pondérée sera donnée par
 
@@ -811,11 +811,11 @@ assert moyenne([(3, 0), (5, 0)])==None
 ![alt text](images/image-2.png)
 
 On travaille sur des dessins en noir et blanc obtenus à partir de pixels noirs et blancs :
-La figure « cœur » ci-dessus va servir d’exemple.
-On la représente par une grille de nombres, c’est-à-dire par une liste composée de sous-listes de même longueurs.
+La figure « cœur » ci-dessus va servir d'exemple.
+On la représente par une grille de nombres, c'est-à-dire par une liste composée de sous-listes de même longueurs.
 Chaque sous-liste représentera donc une ligne du dessin.
 
-Dans le code ci-dessous, la fonction `affiche` permet d’afficher le dessin. Les pixels noirs (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par deux espaces.
+Dans le code ci-dessous, la fonction `affiche` permet d'afficher le dessin. Les pixels noirs (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par deux espaces.
 
 La fonction `liste_zoom` prend en arguments une liste `liste_depart` et un entier `k`. Elle renvoie une liste où chaque élément de `liste_depart` est dupliqué `k` fois.
 
@@ -976,7 +976,7 @@ recherche considérés ne contiennent pas de doublons.
 
 
 
-Compléter la méthode récursive inserer afin qu’elle permette d’insérer une clé dans l’arbre binaire de recherche non vide sur lequel on l’appelle.
+Compléter la méthode récursive inserer afin qu'elle permette d'insérer une clé dans l'arbre binaire de recherche non vide sur lequel on l'appelle.
 
 Voici un exemple d'utilisation :
 
@@ -996,13 +996,13 @@ assert arbre.gauche.droit.etiquette==6
 ## S_12.1
 
 Écrire une fonction `tri_selection` qui prend en paramètre un tableau `tab` de nombres
-entiers (type `list`) et qui le modifie afin qu’il soit trié par ordre croissant.
+entiers (type `list`) et qui le modifie afin qu'il soit trié par ordre croissant.
 
-On utilisera l’algorithme suivant :
+On utilisera l'algorithme suivant :
 
-- on recherche le plus petit élément du tableau, en le parcourant du rang 0 au dernier rang, et on l’échange avec l’élément d’indice 0 ;
-- on recherche ensuite le plus petit élément du tableau restreint du rang 1 au dernier rang, et on l’échange avec l’élément d’indice 1 ;
-- on continue de cette façon jusqu’à ce que le tableau soit entièrement trié.
+- on recherche le plus petit élément du tableau, en le parcourant du rang 0 au dernier rang, et on l'échange avec l'élément d'indice 0 ;
+- on recherche ensuite le plus petit élément du tableau restreint du rang 1 au dernier rang, et on l'échange avec l'élément d'indice 1 ;
+- on continue de cette façon jusqu'à ce que le tableau soit entièrement trié.
 
 ```python
 def tri_selection(a):
@@ -1023,10 +1023,10 @@ Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 
 Une élève de NSI décide de le coder en langage Python de la manière suivante :
 
 - le programme génère un nombre entier aléatoire compris entre 1 et 99 ;
-- si la proposition de l’utilisatrice est plus petite que le nombre cherché, l’utilisatrice en est avertie. Elle peut alors en tester un autre ;
-- si la proposition de l’utilisatrice est plus grande que le nombre cherché, l’utilisatrice en est avertie. Elle peut alors en tester un autre ;
-- si l’utilisatrice trouve le bon nombre en 10 essais ou moins, elle gagne ;
-- si l’utilisatrice a fait plus de 10 essais sans trouver le bon nombre, elle perd.
+- si la proposition de l'utilisatrice est plus petite que le nombre cherché, l'utilisatrice en est avertie. Elle peut alors en tester un autre ;
+- si la proposition de l'utilisatrice est plus grande que le nombre cherché, l'utilisatrice en est avertie. Elle peut alors en tester un autre ;
+- si l'utilisatrice trouve le bon nombre en 10 essais ou moins, elle gagne ;
+- si l'utilisatrice a fait plus de 10 essais sans trouver le bon nombre, elle perd.
 
 La fonction `randint` est utilisée.  
 Si a et b sont des entiers tels que `a <= b`, `randint(a,b)` renvoie un
@@ -1061,9 +1061,9 @@ Compléter le code ci-dessous et le tester :
 ## S_13.1
 
 Écrire une fonction `recherche` qui prend en paramètres `elt` un nombre entier et `tab`
-un tableau de nombres entiers (type `list`), et qui renvoie l’indice de la première occurrence de `elt` dans `tab` si `elt` est dans `tab` et `None` sinon.
+un tableau de nombres entiers (type `list`), et qui renvoie l'indice de la première occurrence de `elt` dans `tab` si `elt` est dans `tab` et `None` sinon.
 
-L’objectif de cet exercice est de parcourir un tableau, il est interdit d’utiliser la méthode
+L'objectif de cet exercice est de parcourir un tableau, il est interdit d'utiliser la méthode
 `index` des listes Python.
 
 ```python
@@ -1083,7 +1083,7 @@ assert recherche(15, [8, 9, 10, 15])==3
 
 ## S_13.2
 
-On considère la fonction `insere` ci-dessous qui prend en argument un tableau `tab` d’en-
+On considère la fonction `insere` ci-dessous qui prend en argument un tableau `tab` d'en-
 tiers triés par ordre croissant et un entier `a`. 
 
 Cette fonction crée et renvoie un nouveau tableau à partir de celui fourni en paramètre en y
@@ -1122,11 +1122,11 @@ assert insere([], 1)==[1]
 ## S_14.1
 
 Écrire une fonction `min_et_max` qui prend en paramètre un tableau de nombres `tab` non vide, et qui renvoie la plus petite et la plus grande valeur du tableau sous la
-forme d’un dictionnaire à deux clés `min` et `max`.
+forme d'un dictionnaire à deux clés `min` et `max`.
 
 Les tableaux seront représentés sous forme de liste Python.
 
-L’utilisation des fonctions natives `min`, `max` et `sorted`, ainsi que la méthode `sort` n’est pas
+L'utilisation des fonctions natives `min`, `max` et `sorted`, ainsi que la méthode `sort` n'est pas
 autorisée.
 
 ```python
@@ -1147,7 +1147,7 @@ assert min_et_max([-1, -1, -1, -1, -1])=={'min': -1, 'max': -1}
 
 ## S_14.2
 
-On dispose d’une classe `Carte` permettant de créer des objets modélisant des cartes à
+On dispose d'une classe `Carte` permettant de créer des objets modélisant des cartes à
 jouer.
 
 Compléter la classe `Paquet_de_cartes` suivante en respectant les spécifications
@@ -1156,11 +1156,11 @@ données dans les chaînes de documentation.
 Ajouter une assertion dans la méthode `recuperer_carte` afin de vérifier que le paramètre `pos`
 est correct.
 
-On rappelle que l’instruction
+On rappelle que l'instruction
 
 `assert condition, message`
 
-permet de vérifier que la condition est vraie. Si ce n’est pas le cas, le programme s’arrête et affiche le message d’erreur fourni.
+permet de vérifier que la condition est vraie. Si ce n'est pas le cas, le programme s'arrête et affiche le message d'erreur fourni.
 
 >```python
 >class Carte:
@@ -1236,10 +1236,10 @@ assert moyenne([1.0, 2.0, 4.0])==2.3333333333333335
 
 On considère la fonction `binaire`.
 Cette fonction prend en paramètre un entier positif `a` en
-écriture décimale et renvoie son écriture binaire sous la forme d’une chaine de caractères.
+écriture décimale et renvoie son écriture binaire sous la forme d'une chaine de caractères.
 
-L’algorithme utilise la méthode des divisions euclidiennes successives comme l’illustre
-l’exemple ci-après.
+L'algorithme utilise la méthode des divisions euclidiennes successives comme l'illustre
+l'exemple ci-après.
 
 ![alt text](images/image-3.png)
 
@@ -1275,11 +1275,11 @@ entier positif `n` et renvoie une une chaine de caractère correspondant à l‘
 
 On rappelle que :
 
-- l’écriture binaire de 25 est 11001 car $25 = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$ ;
+- l'écriture binaire de 25 est 11001 car $25 = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$ ;
 - `n % 2` vaut 0 ou 1 selon que `n` est pair ou impair ;
 - `n // 2`  donne le quotient de la division euclidienne de `n` par 2.
 
-Il est interdit dans cet exercice d’utiliser la fonction `bin` de Python.
+Il est interdit dans cet exercice d'utiliser la fonction `bin` de Python.
 
 ```python
 def ecriture_binaire_entier_positif(a):
@@ -1299,15 +1299,15 @@ assert ecriture_binaire_entier_positif(105)=='1101001'
 
 ## S_16.2
 
-La fonction `tri_bulles` prend en paramètre une liste `tab` d’entiers (type `list`) et le modifie pour le trier par ordre croissant.
+La fonction `tri_bulles` prend en paramètre une liste `tab` d'entiers (type `list`) et le modifie pour le trier par ordre croissant.
 
 
 Le tri à bulles est un tri en place qui commence par placer le plus grand élément en
 dernière position en parcourant le tableau de gauche à droite et en échangeant au passage
-les éléments voisins mal ordonnés (si la valeur de l’élément d’indice `i` a une valeur
-strictement supérieure à celle de l’indice `i + 1`, ils sont échangés). Le tri place ensuite
+les éléments voisins mal ordonnés (si la valeur de l'élément d'indice `i` a une valeur
+strictement supérieure à celle de l'indice `i + 1`, ils sont échangés). Le tri place ensuite
 en avant-dernière position le plus grand élément du tableau privé de son dernier élément
-en procédant encore à des échanges d’éléments voisins. Ce principe est répété jusqu’à
+en procédant encore à des échanges d'éléments voisins. Ce principe est répété jusqu'à
 placer le minimum en première position.
 
 
@@ -1350,7 +1350,7 @@ assert tri_bulles([9, 7, 4, 3])==[3, 4, 7, 9]
 ## S_17.1
 
 Écrire une fonction Python appelée `nb_repetitions` qui prend en paramètres un
-élément `elt` et un tableau `tab` (type `list`) et renvoie le nombre de fois où l’élément apparaît dans le tableau.
+élément `elt` et un tableau `tab` (type `list`) et renvoie le nombre de fois où l'élément apparaît dans le tableau.
 
 ```python
 def nb_repetitions(a):
@@ -1368,7 +1368,7 @@ assert nb_repetitions(12, [1, 3, 7, 21, 36, 44])==0
 
 ## S_17.2
 
-Pour rappel, la conversion d’un nombre entier positif en binaire peut s’effectuer à l’aide
+Pour rappel, la conversion d'un nombre entier positif en binaire peut s'effectuer à l'aide
 des divisions successives comme illustré ici :
 
 ![alt text](images/image-4.png)
@@ -1404,7 +1404,7 @@ assert binaire(77)=='1001101'
 Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers relatifs
 `n1` et `n2`, et qui renvoie le produit de ces deux nombres.
 
-Les seules opérations arithmétiques autorisées sont l’addition et la soustraction.
+Les seules opérations arithmétiques autorisées sont l'addition et la soustraction.
 
 ```python
 def multiplication(a,b):
@@ -1435,7 +1435,7 @@ Les paramètres de la fonction sont :
 - `i`, l'indice de début de la partie du tableau où s'effectue la recherche ;
 - `j`, l'indice de fin de la partie du tableau où s'effectue la recherche.
 
-L’algorithme demandé est une recherche dichotomique récursive.
+L'algorithme demandé est une recherche dichotomique récursive.
 
 Recopier et compléter le code de la fonction `chercher` suivante :
 
@@ -1469,13 +1469,13 @@ assert chercher([1, 5, 6, 6, 9, 12], 6, 0, 5)==2
 On rappelle que :
 
 - le nombre $a^n$ est le nombre $a \times a \times a \times \dots \times a$, où le facteur $a$ apparaît $n$ fois,
-- en langage Python, l’instruction `t[-1]` permet d’accéder au dernier élément du tableau `t`.
+- en langage Python, l'instruction `t[-1]` permet d'accéder au dernier élément du tableau `t`.
 
-Dans cet exercice, l’opérateur ```**```  et la fonction `pow` ne sont pas autorisés.
+Dans cet exercice, l'opérateur ```**```  et la fonction `pow` ne sont pas autorisés.
 
 Programmer en langage Python une fonction `liste_puissances` qui prend en arguments un nombre entier `a`, un entier strictement positif `n` et qui renvoie la liste de ses puissances $\rm{[a^1, a^2, ..., a^n]}$.
 
-Programmer également une fonction `liste_puisssances_borne` qui prend en arguments un nombre entier `a` supérieur ou égal à 2 et un entier `borne`, et qui renvoie la liste de ses puissances, à l’exclusion de $\rm{a^0}$, strictement inférieures à `borne`.
+Programmer également une fonction `liste_puisssances_borne` qui prend en arguments un nombre entier `a` supérieur ou égal à 2 et un entier `borne`, et qui renvoie la liste de ses puissances, à l'exclusion de $\rm{a^0}$, strictement inférieures à `borne`.
 
 ```python
 def liste_puissances(a, b):
@@ -1510,7 +1510,7 @@ On affecte à chaque lettre de l'alphabet un code selon le tableau ci-dessous :
 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 
 
 Cette table de correspondance est stockée dans un dictionnaire `dico` où les clés sont les
-lettres de l’alphabet et les valeurs les codes correspondants.
+lettres de l'alphabet et les valeurs les codes correspondants.
 
 ```python
 dico = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6,
@@ -1520,19 +1520,19 @@ dico = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6,
         "W": 23, "X": 24, "Y": 25, "Z": 26}
 ```
 
-Pour un mot donné, on détermine d’une part son code alphabétique concaténé, obtenu par la juxtaposition des codes de chacun de ses caractères, et d’autre part, son code additionné, qui est la somme des codes de chacun de ses caractères.
+Pour un mot donné, on détermine d'une part son code alphabétique concaténé, obtenu par la juxtaposition des codes de chacun de ses caractères, et d'autre part, son code additionné, qui est la somme des codes de chacun de ses caractères.
 
 Par ailleurs, on dit que ce mot est « parfait » si le code additionné divise le code concaténé.
 
 Exemples :
 
-- Pour le mot "PAUL", le code concaténé est la chaîne '1612112', soit l’entier 1 612 112. Son code additionné est l’entier 50 car 16 + 1 + 21 + 12 = 50. 50 ne divise pas l’entier 1 612 112 ; par conséquent, le mot "PAUL" n’est pas parfait.
+- Pour le mot "PAUL", le code concaténé est la chaîne '1612112', soit l'entier 1 612 112. Son code additionné est l'entier 50 car 16 + 1 + 21 + 12 = 50. 50 ne divise pas l'entier 1 612 112 ; par conséquent, le mot "PAUL" n'est pas parfait.
 
-- Pour le mot "ALAIN", le code concaténé est la chaîne '1121914', soit l’entier 1 121 914. Le code additionné est l’entier 37 car 1 + 12 + 1 + 9 + 14 = 37. 37 divise l’entier 1 121 914 ; par conséquent, le mot "ALAIN" est parfait.
+- Pour le mot "ALAIN", le code concaténé est la chaîne '1121914', soit l'entier 1 121 914. Le code additionné est l'entier 37 car 1 + 12 + 1 + 9 + 14 = 37. 37 divise l'entier 1 121 914 ; par conséquent, le mot "ALAIN" est parfait.
 
-Compléter la fonction codes_parfait située à la page suivante et qui prend en paramètre un mot en majuscule et renvoie un triplet constitué du code additionné, du code concaténé et d’un booléen indiquant si le mot est parfait ou non.
+Compléter la fonction codes_parfait située à la page suivante et qui prend en paramètre un mot en majuscule et renvoie un triplet constitué du code additionné, du code concaténé et d'un booléen indiquant si le mot est parfait ou non.
 
-On rappelle que pour tester si un entier a divise un entier b, on utilise l’opérateur modulo b % a qui renvoie le reste de la division euclidienne de b par a. Sib % a vaut 0, alors a divise b.
+On rappelle que pour tester si un entier a divise un entier b, on utilise l'opérateur modulo b % a qui renvoie le reste de la division euclidienne de b par a. Sib % a vaut 0, alors a divise b.
 
 ```python
 def codes_parfait(mot):
@@ -1608,19 +1608,19 @@ Exemples :
 
 ## S_20.2
 
-On considère une image en 256 niveaux de gris que l’on représente par une grille de
-nombres, c’est-à-dire une liste composée de sous-listes toutes de longueurs identiques.
+On considère une image en 256 niveaux de gris que l'on représente par une grille de
+nombres, c'est-à-dire une liste composée de sous-listes toutes de longueurs identiques.
 
 
-La largeur de l’image est donc la longueur d’une sous-liste et la hauteur de l’image est le
+La largeur de l'image est donc la longueur d'une sous-liste et la hauteur de l'image est le
 nombre de sous-listes.
 
 
-Chaque sous-liste représente une ligne de l’image et chaque élément des sous-listes est
-un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixel.
+Chaque sous-liste représente une ligne de l'image et chaque élément des sous-listes est
+un entier compris entre 0 et 255, représentant l'intensité lumineuse du pixel.
 
 
-Le négatif d’une image est l’image constituée des pixels `x_n` tels que `x_n + x_i = 255` où `x_i` est le pixel correspondant de l’image initiale.
+Le négatif d'une image est l'image constituée des pixels `x_n` tels que `x_n + x_i = 255` où `x_i` est le pixel correspondant de l'image initiale.
 
 Compléter le programme suivant :
 
@@ -1677,7 +1677,7 @@ assert binaire(img,120)==[[0, 0, 1, 1, 0],[0, 1, 1, 1, 0],[1, 1, 1, 0, 0],[1, 0,
 
 Écrire une fonction `recherche_motif` qui prend en paramètre une chaîne de caractères
 `motif` non vide et une chaîne de caractères `texte` et qui renvoie la liste des positions de
-`motif` dans `texte`. Si `motif` n’apparaît pas, la fonction renvoie une liste vide.
+`motif` dans `texte`. Si `motif` n'apparaît pas, la fonction renvoie une liste vide.
 
 ```python
 def recherche_motif(a, b):
@@ -1697,13 +1697,13 @@ assert recherche_motif("ab", "abracadabraab")==[0, 7, 11]
 ## S_21.2
 
 Dans cet exercice, on considère un graphe non orienté représenté sous forme de listes
-d’adjacence. On suppose que les sommets sont numérotés de 0 à n-1.
+d'adjacence. On suppose que les sommets sont numérotés de 0 à n-1.
 
 Ainsi, le graphe suivant:
 
 ![alt text](images/image-5.png)
 
-sera représenté par la liste d’adjacence suivante:
+sera représenté par la liste d'adjacence suivante:
 
 `adj = [[1, 2], [0, 3], [0], [1], [5], [4]]`
 
@@ -1747,7 +1747,7 @@ assert accessibles([[1, 2], [0], [0, 3], [1], [5], [4]], 4)==[4, 5]
 ## S_22.1
 
 Écrire une fonction `recherche_indices_classement` qui prend en paramètres un
-entier `elt` et un tableau d’entiers `tab`, et qui renvoie trois listes :
+entier `elt` et un tableau d'entiers `tab`, et qui renvoie trois listes :
 
 - la première liste contient les indices des valeurs du tableau `tab` strictement inférieures à `elt` ;
 - la deuxième liste contient les indices des valeurs du tableau `tab` égales à `elt` ;
@@ -1770,11 +1770,11 @@ assert recherche_indices_classement(3, [])==([], [], [])
 
 ## S_22.2
 
-Une professeure de NSI décide de gérer les résultats de sa classe sous la forme d’un
+Une professeure de NSI décide de gérer les résultats de sa classe sous la forme d'un
 dictionnaire :
 
 - les clefs sont les noms des élèves ;
-- les valeurs sont des dictionnaires dont les clefs sont les types d’épreuves sous forme de chaîne de caractères et les valeurs sont les notes obtenues associées à leurs coefficients dans une liste.
+- les valeurs sont des dictionnaires dont les clefs sont les types d'épreuves sous forme de chaîne de caractères et les valeurs sont les notes obtenues associées à leurs coefficients dans une liste.
 
 Avec :
 
@@ -1796,9 +1796,9 @@ resultats = {'Dupont': {
             }
 ```
 
-L’élève dont le nom est Durand a ainsi obtenu au DS2 la note de 8 avec un coefficient 4.
+L'élève dont le nom est Durand a ainsi obtenu au DS2 la note de 8 avec un coefficient 4.
 
-Le professeur crée une fonction moyenne qui prend en paramètre le nom d’un de ses élèves et renvoie sa moyenne arrondie au dixième. Si l’élève n’a pas de notes, on considère que sa moyenne est nulle. Si le nom donné n’est pas dans les résultats, la fonction renvoie None.
+Le professeur crée une fonction moyenne qui prend en paramètre le nom d'un de ses élèves et renvoie sa moyenne arrondie au dixième. Si l'élève n'a pas de notes, on considère que sa moyenne est nulle. Si le nom donné n'est pas dans les résultats, la fonction renvoie None.
 
 Compléter le code de la professeure ci-dessous :
 
@@ -1854,12 +1854,12 @@ assert moyenne("Durand", resultats)==8.5
 
 Dans cet exercice, on considère des arbres binaires de recherche qui sont :
 
-- soit l’arbre vide identifié par `None` ;
+- soit l'arbre vide identifié par `None` ;
 - soit un nœud, contenant une clé et deux sous-arbres gauche et droit et représenté par un triplet `(g, v, d)` où `g` et `d` sont les sous-arbres gauche et droit et `v` la clé.
 
 ![alt text](images/image-6.png)
 
-Ainsi, l’arbre binaire de recherche `abr1` ci-contre est créé par le code python ci-dessous
+Ainsi, l'arbre binaire de recherche `abr1` ci-contre est créé par le code python ci-dessous
 
 ```python
 n0 = (None, 0, None)
@@ -1871,7 +1871,7 @@ abr1 = (n0, 1, n2)
 Écrire une fonction récursive `insertion_abr(a, cle)` qui prend en paramètres une
 clé `cle` et un arbre binaire de recherche `a`, et qui renvoie un arbre binaire de recherche
 dans lequel `cle` a été insérée.
-Dans le cas où `cle` est déjà présente dans `a`, la fonction renvoie l’arbre a inchangé.
+Dans le cas où `cle` est déjà présente dans `a`, la fonction renvoie l'arbre a inchangé.
 
 ```python
 def insertion_abr(a, b):
@@ -1893,7 +1893,7 @@ assert insertion_abr(abr1, 2)==((None,0,None),1,(None,2,(None,3,None)))
 
 ## S_23.2
 
-On dispose d’un ensemble d’objets dont on connaît, pour chacun, la masse. On souhaite ranger l’ensemble de ces objets dans des boites identiques de telle manière que la somme des masses des objets contenus dans une boîte ne dépasse pas la capacité `c` de la boîte. On souhaite utiliser le moins de boîtes possibles pour ranger cet ensemble d’objets.
+On dispose d'un ensemble d'objets dont on connaît, pour chacun, la masse. On souhaite ranger l'ensemble de ces objets dans des boites identiques de telle manière que la somme des masses des objets contenus dans une boîte ne dépasse pas la capacité `c` de la boîte. On souhaite utiliser le moins de boîtes possibles pour ranger cet ensemble d'objets.
 
 
 Pour résoudre ce problème, on utilisera un algorithme glouton consistant à placer chacun des objets dans la première boîte où cela est possible.
@@ -1906,7 +1906,7 @@ Par exemple, pour ranger dans des boîtes de capacité `c = 5` un ensemble de tr
 
 On a donc utilisé deux boîtes de capacité `c = 5` pour ranger les 3 objets.
 
-Compléter la fonction Python `empaqueter(liste_masses, c)` suivante pour qu’elle renvoie le nombre de boîtes de capacité `c` nécessaires pour empaqueter un ensemble d’objets dont les masses sont contenues dans la liste `liste_masses`.
+Compléter la fonction Python `empaqueter(liste_masses, c)` suivante pour qu'elle renvoie le nombre de boîtes de capacité `c` nécessaires pour empaqueter un ensemble d'objets dont les masses sont contenues dans la liste `liste_masses`.
 
 ```python
 def empaqueter(liste_masses, c):
@@ -1937,9 +1937,9 @@ assert empaqueter([7, 6, 3, 4, 8, 5, 9, 2], 11)==5
 # Sujet_24
 ## S_24.1
 
-Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soit un nœud représenté par un triplet `(g, x, d)` où `x` est l’étiquette du nœud et `g` et `d` sont les sous-arbres gauche et droit.
+Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soit un nœud représenté par un triplet `(g, x, d)` où `x` est l'étiquette du nœud et `g` et `d` sont les sous-arbres gauche et droit.
 
-On souhaite écrire une fonction `parcours_largeur` qui prend en paramètre un arbre binaire et qui renvoie la liste des étiquettes des nœuds de l’arbre parcourus en largeur.
+On souhaite écrire une fonction `parcours_largeur` qui prend en paramètre un arbre binaire et qui renvoie la liste des étiquettes des nœuds de l'arbre parcourus en largeur.
 
 ```python
 def parcours_largeur(a):
@@ -1963,10 +1963,10 @@ Par exemple, dans le tableau `[1, -2, 3, 10, -4, 7, 2, -5]`, la plus grande somm
 
 
 Pour cela, on va résoudre le problème par programmation dynamique. Si on note `tab` le tableau considéré et `i` un indice dans ce tableau, on se ramène à un problème plus simple : déterminer la plus grande somme possible de ses éléments consécutifs se terminant à
-l’indice `i`.
+l'indice `i`.
 
 
-Si on connait la plus grande somme possible de ses éléments consécutifs se terminant à l’indice `i-1`, on peut déterminer la plus grande somme possible de ses éléments consécutifs se terminant à l’indice `i` :
+Si on connait la plus grande somme possible de ses éléments consécutifs se terminant à l'indice `i-1`, on peut déterminer la plus grande somme possible de ses éléments consécutifs se terminant à l'indice `i` :
 
 - soit on obtient une plus grande somme en ajoutant `tab[i]` à cette somme précédente ;
 - soit on commence une nouvelle somme à partir de `tab[i]`.
