@@ -1,5 +1,6 @@
 # Sujet_04
-## S_4.1
+
+## Exercice 1
 
 Programmer la fonction `recherche`, prenant en paramètres un tableau non vide `tab` (type `list`) d'entiers et un entier `n`, et qui renvoie l'indice de la **dernière** occurrence de l'élément cherché. Si l'élément n'est pas présent, la fonction renvoie `None`.
 
@@ -8,15 +9,15 @@ def recherche(a):
     pass
 ```
 
-
 Exemples
+
 ```python
 assert recherche([5, 3], 1) == None  # renvoie None
 assert recherche([2, 4], 2) == 0
 assert recherche([2, 3, 5, 2, 4], 2) == 3
 ```
 
-## S_4.2
+## Exercice 2
 
 On souhaite programmer une fonction donnant la distance la plus courte entre un point
 de départ et une liste de points. Les points sont tous à coordonnées entières.
@@ -27,8 +28,6 @@ On rappelle que la distance entre deux points du plan de coordonnées $(x;y)$ et
 vérifie la formule :
 
 $$d^2=(x-x')^2+(y-y')^2$$
-
-
 
 Compléter le code des fonctions `distance_carre` et `point_le_plus_proche` fournies ci-dessous pour qu'elles répondent à leurs spécifications.
 
@@ -59,4 +58,3 @@ assert distance_carre((1, 0), (0, 1)) == 2
 assert point_le_plus_proche((0, 0), [(7, 9), (2, 5), (5, 2)]) == (2, 5)
 assert point_le_plus_proche((5, 2), [(7, 9), (2, 5), (5, 2)]) == (5, 2)
 ```
-
