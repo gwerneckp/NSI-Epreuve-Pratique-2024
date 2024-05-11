@@ -14,7 +14,7 @@ a = {
 
 
 # Votre code
-def taille(arbre: dict[list[str]], lettre: str):
+def taille(arbre: dict[str, list[str]], lettre: str):
     if not arbre[lettre][0] and not arbre[lettre][1]:
         return 1
     if not arbre[lettre][0]:

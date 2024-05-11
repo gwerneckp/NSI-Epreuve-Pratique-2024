@@ -14,14 +14,16 @@ def recherche(tab: list[int], n: int) -> Optional[int]:
     return last_i
 
 
-def distance_carre(point1: tuple[int], point2: tuple[int]):
+def distance_carre(point1: tuple[int, int], point2: tuple[int, int]):
     """Calcule et renvoie la distance au carre entre
     deux points."""
 
     return (point1[0] - point2[0]) ** 2 + (point1[1] - point2[1]) ** 2
 
 
-def point_le_plus_proche(depart: tuple[int], tab: list[tuple[int]]) -> tuple[int]:
+def point_le_plus_proche(
+    depart: tuple[int, int], tab: list[tuple[int, int]]
+) -> tuple[int, int]:
     """Renvoie les coordonnées du premier point du tableau tab se
     trouvant à la plus courte distance du point depart."""
     min_point = tab[0]
