@@ -57,6 +57,12 @@ class TestSujet06(TestCase):
             tri_insertion([98, 12, 104, 23, 131, 9]), [9, 12, 23, 98, 104, 131]
         )
 
+    def test_tri_insertion_already_sorted(self) -> None:
+        self.assertListEqual(tri_insertion([1, 2, 3, 4]), [1, 2, 3, 4])
+
+    def test_tri_insertion_vide(self) -> None:
+        self.assertListEqual(tri_insertion([]), [])
+
 
 if __name__ == "__main__":
     main()
