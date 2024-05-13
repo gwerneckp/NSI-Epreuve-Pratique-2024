@@ -4,6 +4,7 @@ def verifie(a):
 
 urne = ["A", "A", "A", "B", "C", "B", "C", "B", "C", "B"]
 
+
 def depouille(urne):
     """prend en paramètre une liste de suffrages et renvoie un
     dictionnaire avec le nombre de voix pour chaque candidat"""
@@ -25,8 +26,3 @@ def vainqueurs(election):
             nmax = ...
     liste_finale = [nom for nom in election if ...]
     return ...
-
-    "A": 3,
-    "B": 4,
-    "C": 3,
-}
