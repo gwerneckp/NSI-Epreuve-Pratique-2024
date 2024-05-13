@@ -1,5 +1,6 @@
-# Sujet_23
-## S_23.1
+# Sujet 23
+
+## Exercice 1
 
 Dans cet exercice, on considère des arbres binaires de recherche qui sont :
 
@@ -27,7 +28,6 @@ def insertion_abr(a, b):
     pass
 ```
 
-
 Résultats à obtenir :
 
 ```python
@@ -48,10 +48,9 @@ assert insertion_abr(abr1, -5) == (
 assert insertion_abr(abr1, 2) == ((None, 0, None), 1, (None, 2, (None, 3, None)))
 ```
 
-## S_23.2
+## Exercice 2
 
 On dispose d'un ensemble d'objets dont on connaît, pour chacun, la masse. On souhaite ranger l'ensemble de ces objets dans des boites identiques de telle manière que la somme des masses des objets contenus dans une boîte ne dépasse pas la capacité `c` de la boîte. On souhaite utiliser le moins de boîtes possibles pour ranger cet ensemble d'objets.
-
 
 Pour résoudre ce problème, on utilisera un algorithme glouton consistant à placer chacun des objets dans la première boîte où cela est possible.
 
@@ -90,4 +89,3 @@ assert empaqueter([1, 2, 3, 4, 5], 10) == 2
 assert empaqueter([1, 2, 3, 4, 5], 5) == 4
 assert empaqueter([7, 6, 3, 4, 8, 5, 9, 2], 11) == 5
 ```
-
