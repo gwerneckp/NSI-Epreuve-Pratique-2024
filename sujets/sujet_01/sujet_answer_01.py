@@ -27,10 +27,10 @@ def taille(arbre: dict[str, list[str]], lettre: str) -> int:
 
 def echange(tab: list[Any], i: int, j: int) -> None:
     """Echange les éléments d'indice i et j dans le tableau tab."""
-    # temp = tab[i]
-    # tab[i] = tab[j]
-    # tab[j] = temp
-    tab[i], tab[j] = tab[j], tab[i]
+    temp = tab[i]
+    tab[i] = tab[j]
+    tab[j] = temp
+    # tab[i], tab[j] = tab[j], tab[i]
 
 
 def tri_selection(tab: list[int]) -> list[int]:
