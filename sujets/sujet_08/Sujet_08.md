@@ -1,7 +1,8 @@
-# Sujet_08
-## S_8.1
+# Sujet 08
 
-Le codage par différence (*delta encoding* en anglais) permet de compresser un tableau
+## Exercice 1
+
+Le codage par différence (_delta encoding_ en anglais) permet de compresser un tableau
 d'entiers dont les valeurs sont proches les unes des autres. Le principe est de stocker la
 première donnée en indiquant pour chaque autre donnée sa différence avec la précédente
 plutôt que la donnée elle-même.
@@ -18,7 +19,6 @@ def delta(a):
     pass
 ```
 
-
 Exemples :
 
 ```python
@@ -26,25 +26,22 @@ assert delta([1000, 800, 802, 1000, 1003]) == [1000, -200, 2, 198, 3]
 assert delta([42]) == [42]
 ```
 
-## S_8.2
+## Exercice 2
 
 Une expression arithmétique ne comportant que les quatre opérations +, −, ×, ÷ peut être
 représentée sous forme d'arbre binaire. Les nœuds internes sont des opérateurs et les feuilles
 sont des nombres. Dans un tel arbre, la disposition des nœuds joue le rôle des parenthèses que
-nous connaissons bien.  
+nous connaissons bien.
 
 ![alt text](images/image-1.png)
 
-En parcourant en profondeur infixe l'arbre binaire ci-dessus, on retrouve l'expression notée habituellement :  
-
+En parcourant en profondeur infixe l'arbre binaire ci-dessus, on retrouve l'expression notée habituellement :
 
 $$(3 \times (8 + 7)) − (2 + 1)$$
-
 
 La classe `Expr` ci-après permet d'implémenter une structure d'arbre binaire pour représenter de telles expressions.
 
 Compléter la méthode récursive `infixe` qui renvoie une chaîne de caractères contenant des parenthèses représentant l'expression arithmétique sur laquelle on l'applique.
-
 
 ```python
 class Expr:
@@ -94,4 +91,3 @@ e = Expr(
 )
 assert e.infixe() == "((3*(8+7))-(2+1))"
 ```
-

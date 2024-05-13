@@ -1,4 +1,5 @@
-# Sujet_03
+# Sujet 03
+
 ## Exercice 1
 
 Écrire la fonction `maximum_tableau`, prenant en paramètre un tableau non vide de nombres `tab` (de type
@@ -9,7 +10,6 @@ def maximum_tableau(a):
     pass
 ```
 
-
 Exemples :
 
 ```python
@@ -19,18 +19,16 @@ assert maximum_tableau([-27, 24, -3, 15]) == 24
 
 ## Exercice 2
 
-On dispose de chaînes de caractères contenant uniquement des parenthèses ouvrantes et fermantes. 
+On dispose de chaînes de caractères contenant uniquement des parenthèses ouvrantes et fermantes.
 
 Un parenthésage est correct si :
 
 - le nombre de parenthèses ouvrantes de la chaîne est égal au nombre de parenthèses fermantes.
 - en parcourant la chaîne de gauche à droite, le nombre de parenthèses déjà ouvertes doit être, à tout moment, supérieur ou égal au nombre de parenthèses déjà fermées.
 
-
-Ainsi, `((()())(()))` est un parenthésage correct. 
+Ainsi, `((()())(()))` est un parenthésage correct.
 
 Les parenthésages `())(()` et `(())(()` sont, eux, incorrects.
-
 
 On dispose du code de la classe `Pile` suivant :
 
@@ -93,4 +91,3 @@ assert bon_parenthesage("((()())(()))") == True
 assert bon_parenthesage("())(()") == False
 assert bon_parenthesage("(())(()") == False
 ```
-

@@ -1,4 +1,4 @@
-# Sujet_01
+# Sujet 01
 
 ## Exercice 1
 
@@ -11,7 +11,6 @@ On utilise la valeur `''` pour représenter un fils vide.
 Par exemple, l'arbre
 
 ![alt text](images/image.png)
-
 
 est stocké dans
 
@@ -43,6 +42,7 @@ On observe que, par exemple, `arbre[lettre][0]`, respectivement
 droit, de l'arbre `arbre` de sommet `lettre`.
 
 Exemple :
+
 ```python
 assert taille(a, "F") == 9
 assert taille(a, "B") == 5
@@ -55,19 +55,18 @@ On considère l'algorithme de tri de tableau suivant : à chaque étape, on parc
 tableau des éléments non rangés et on place le plus petit élément en première position de
 ce sous-tableau.
 
-Exemple avec le tableau : ```t = [41, 55, 21, 18, 12, 6, 25]``` 
+Exemple avec le tableau : `t = [41, 55, 21, 18, 12, 6, 25]`
 
 - Étape 1 : on parcourt tous les éléments du tableau, on permute le plus petit élément avec
-le premier. Le tableau devient `t = [6, 55, 21, 18, 12, 41, 25]`
+  le premier. Le tableau devient `t = [6, 55, 21, 18, 12, 41, 25]`
 
 - Étape 2 : on parcourt tous les éléments **sauf le premier**, on permute le plus petit élément
-trouvé avec le second.  
-Le tableau devient : ```t = [6, 12, 21, 18, 55, 41, 25]``` 
+  trouvé avec le second.  
+  Le tableau devient : `t = [6, 12, 21, 18, 55, 41, 25]`
 
-Et ainsi de suite. 
+Et ainsi de suite.
 
 Le programme ci-dessous implémente cet algorithme.
-
 
 ```python
 def echange(tab, i, j):
@@ -95,4 +94,3 @@ Compléter le code de cette fonction de façon à obtenir :
 ```python
 assert tri_selection([41, 55, 21, 18, 12, 6, 25]) == [6, 12, 18, 21, 25, 41, 55]
 ```
-

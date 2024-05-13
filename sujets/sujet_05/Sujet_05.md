@@ -1,4 +1,5 @@
-# Sujet_05
+# Sujet 05
+
 ## Exercice 1
 
 Écrire une fonction `max_et_indice` qui prend en paramètre un tableau non vide `tab` de
@@ -45,7 +46,6 @@ Il y a donc 4 points de rupture.
 
 Compléter les fonctions Python `est_un_ordre` et `nombre_points_rupture`
 proposées à la page suivante pour que :
-
 
 - la fonction `est_un_ordre` renvoie `True` si le tableau passé en paramètre représente bien un ordre de gènes de chromosome et `False` sinon ;
 
@@ -99,4 +99,3 @@ assert nombre_points_rupture([1, 2, 3, 4, 5]) == 0
 assert nombre_points_rupture([1, 6, 2, 8, 3, 7, 4, 5]) == 7
 assert nombre_points_rupture([2, 1, 3, 4]) == 2
 ```
-

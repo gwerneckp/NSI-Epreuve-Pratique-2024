@@ -1,4 +1,5 @@
-# Sujet_06
+# Sujet 06
+
 ## Exercice 1
 
 Écrire une fonction `verifie` qui prend en paramètre un tableau de valeurs numériques et qui renvoie `True` si ce tableau est trié dans l'ordre croissant, `False` sinon.
@@ -9,7 +10,6 @@ Un tableau vide est considéré comme trié.
 def verifie(a):
     pass
 ```
-
 
 Exemples :
 
@@ -24,7 +24,7 @@ assert verifie([5]) == True
 ## Exercice 2
 
 On considère dans cet exercice l'élection d'un vainqueur à l'issue d'un vote. Les résultats
-du vote sont stockés dans un tableau : chaque vote exprimé est le nom d'un ou d'une candidate.  
+du vote sont stockés dans un tableau : chaque vote exprimé est le nom d'un ou d'une candidate.
 
 Par exemple, les résultats pourraient correspondre au tableau :
 
@@ -76,4 +76,3 @@ assert depouille(["A", "A", "A", "B", "C", "B", "C", "B", "C", "B"]) == {
 assert vainqueurs({"A": 3, "B": 4, "C": 3}) == ["B"]
 assert vainqueurs({"A": 2, "B": 2, "C": 1}) == ["A", "B"]
 ```
-

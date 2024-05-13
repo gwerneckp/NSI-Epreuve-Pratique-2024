@@ -1,4 +1,4 @@
-# Sujet_07
+# Sujet 07
 
 ## Exercice 1
 
