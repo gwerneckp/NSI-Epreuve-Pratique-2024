@@ -29,7 +29,7 @@ def tri_insertion(tab: list[int]) -> list[int]:
     return tab
 
 
-class TestSujet06(TestCase):
+class TestSujet07(TestCase):
     def test_gb_vers_entier_empty(self) -> None:
         self.assertEqual(gb_vers_entier([]), 0)
 
