@@ -1,5 +1,5 @@
 # Sujet_06
-## S_6.1
+## Exercice 1
 
 Écrire une fonction `verifie` qui prend en paramètre un tableau de valeurs numériques et qui renvoie `True` si ce tableau est trié dans l'ordre croissant, `False` sinon.
 
@@ -21,7 +21,7 @@ assert verifie([]) == True
 assert verifie([5]) == True
 ```
 
-## S_6.2
+## Exercice 2
 
 On considère dans cet exercice l'élection d'un vainqueur à l'issue d'un vote. Les résultats
 du vote sont stockés dans un tableau : chaque vote exprimé est le nom d'un ou d'une candidate.  
