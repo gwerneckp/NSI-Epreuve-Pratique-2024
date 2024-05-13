@@ -1,5 +1,6 @@
-# Sujet_09
-## S_9.1
+# Sujet 09
+
+## Exercice 1
 
 On veut trier par ordre croissant les notes d'une évaluation qui sont des nombres entiers compris entre 0 et 10 (inclus).
 
@@ -17,8 +18,6 @@ def effectif_notes(a):
 def notes_triees(b):
     pass
 ```
-
-
 
 Exemple :
 
@@ -46,7 +45,7 @@ assert notes_triees([2, 0, 1, 0, 1, 4, 2, 1, 0, 5, 1]) == [
 ]
 ```
 
-## S_9.2
+## Exercice 2
 
 L'objectif de cet exercice est d'écrire deux fonctions récursives `dec_to_bin` et `bin_to_dec` assurant respectivement la conversion de l'écriture décimale d'un nombre entier vers son écriture en binaire et, réciproquement, la conversion de l'écriture en binaire d'un nombre vers son écriture décimale.
 
@@ -58,11 +57,11 @@ nombre 25 :
 $25 =  2 \times 12 + 1$  
 $\phantom{25} = 2 \times (2 \times 6 + 0) + 1$  
 $\phantom{25} = 2 \times (2 \times (2 \times 3 + 0) + 0) + 1$  
-$\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1$     
-$\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1$   
-$\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$   
+$\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1$  
+$\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1$  
+$\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$
 
-L'écriture binaire de 25 est donc ```11001```.
+L'écriture binaire de 25 est donc `11001`.
 
 0n rappelle également que :
 
@@ -73,9 +72,9 @@ On indique enfin qu'en Python si `mot = "informatique"` alors :
 
 - `mot[-1]` renvoie `'e'`, c'est-à-dire le dernier caractère de la chaîne de caractères `mot`.
 - `mot[:-1]` renvoie `'informatiqu'` , c'est-à-dire l'ensemble de la chaîne de
-caractères `mot` privée de son dernier caractère.
+  caractères `mot` privée de son dernier caractère.
 
-Compléter, puis tester, les codes de deux fonctions ci-dessous. 
+Compléter, puis tester, les codes de deux fonctions ci-dessous.
 On précise que la fonction récursive `dec_to_bin` prend en paramètre un nombre entier et renvoie une chaîne de caractères contenant l'écriture en binaire du nombre passé en paramètre.
 
 ```python
@@ -101,7 +100,6 @@ def bin_to_dec(nb_bin):
         return ... * bin_to_dec(nb_bin[:-1]) + ...
 ```
 
-
 Exemple :
 
 ```python
@@ -113,4 +111,3 @@ La fonction récursive bin_to_dec prend en paramètre une chaîne de caractères
 ```python
 assert bin_to_dec("101010") == 42
 ```
-
