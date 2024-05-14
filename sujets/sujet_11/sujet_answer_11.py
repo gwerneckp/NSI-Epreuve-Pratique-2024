@@ -1,5 +1,6 @@
 from unittest import TestCase, main
-from re import findall
+
+# from re import findall
 
 
 def nombre_de_mots(phrase: str) -> int:
@@ -60,20 +61,30 @@ class TestSujet11(TestCase):
             self.arbre.inserer(cle)
 
     def test_insertion_gauche(self) -> None:
-        self.assertIsNotNone(self.arbre.gauche)
-        self.assertEqual(self.arbre.gauche.etiquette, 3)
+        if self.arbre.gauche:
+            self.assertEqual(self.arbre.gauche.etiquette, 3)
+            return
+        self.fail("None value")
 
     def test_insertion_droit(self) -> None:
-        self.assertIsNotNone(self.arbre.droit)
-        self.assertEqual(self.arbre.droit.etiquette, 9)
+        if self.arbre.droit:
+            self.assertEqual(self.arbre.droit.etiquette, 9)
+            return
+        self.fail("None value")
 
     def test_insertion_gauche_gauche(self) -> None:
-        self.assertIsNotNone(self.arbre.gauche.gauche)
-        self.assertEqual(self.arbre.gauche.gauche.etiquette, 1)
+        if self.arbre.gauche:
+            if self.arbre.gauche.gauche:
+                self.assertEqual(self.arbre.gauche.gauche.etiquette, 1)
+                return
+        self.fail("None value")
 
     def test_insertion_gauche_droit(self) -> None:
-        self.assertIsNotNone(self.arbre.gauche.droit)
-        self.assertEqual(self.arbre.gauche.droit.etiquette, 6)
+        if self.arbre.gauche:
+            if self.arbre.gauche.droit:
+                self.assertEqual(self.arbre.gauche.droit.etiquette, 6)
+                return
+        self.fail("None value")
 
 
 if __name__ == "__main__":
