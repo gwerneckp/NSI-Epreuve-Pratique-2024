@@ -15,14 +15,14 @@ class Noeud:
         """Méthode constructeur pour la classe Noeud.
         Crée une feuille d'étiquette donnée."""
         self.etiquette = etiquette
-        self.gauche: Noeud = None
-        self.droit: Noeud = None
+        self.gauche: Noeud | None = None
+        self.droit: Noeud | None = None
 
     def inserer(self, cle: int) -> None:
         """Insère la clé dans l'arbre binaire de recherche
         en préservant sa structure."""
         if cle < self.etiquette:
-            if self.gauche != None:
+            if self.gauche is not None:
                 self.gauche.inserer(cle)
             else:
                 self.gauche = Noeud(cle)
