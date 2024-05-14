@@ -25,7 +25,7 @@ def negatif(image: list[list[int]]) -> list[list[int]]:
     d'une liste de listes"""
     # on cree une image de 0 aux memes dimensions
     # que le parametre image
-    
+
     # nouvelle_image = [
     #     [0 for k in range(nombre_colonnes(image))] for i in range(nombre_lignes(image))
     # ]
