@@ -1,5 +1,6 @@
-# Sujet_10
-## S_10.1
+# Sujet 10
+
+## Exercice 1
 
 Dans cet exercice on cherche à calculer la moyenne pondérée d'un élève dans une matière donnée. Chaque note est associée à un coefficient qui la pondère.
 
@@ -17,7 +18,6 @@ def moyenne(a):
     pass
 ```
 
-
 Exemple :
 
 ```python
@@ -25,7 +25,7 @@ assert moyenne([(8, 2), (12, 0), (13.5, 1), (5, 0.5)]) == 9.142857142857142
 assert moyenne([(3, 0), (5, 0)]) == None
 ```
 
-## S_10.2
+## Exercice 2
 
 ![alt text](images/image-2.png)
 
@@ -34,7 +34,7 @@ La figure « cœur » ci-dessus va servir d'exemple.
 On la représente par une grille de nombres, c'est-à-dire par une liste composée de sous-listes de même longueurs.
 Chaque sous-liste représentera donc une ligne du dessin.
 
-Dans le code ci-dessous, la fonction `affiche` permet d'afficher le dessin. Les pixels noirs (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par deux espaces.
+Dans le code ci-dessous, la fonction `affiche` permet d'afficher le dessin. Les pixels noirs (1 dans la grille) seront représentés par le caractère "\*" et les blancs (0 dans la grille) par deux espaces.
 
 La fonction `liste_zoom` prend en arguments une liste `liste_depart` et un entier `k`. Elle renvoie une liste où chaque élément de `liste_depart` est dupliqué `k` fois.
 
@@ -76,6 +76,7 @@ def dessin_zoom(grille, k):
             ....append(...)
     return grille_zoomee
 ```
+
 Exemples :
 
 ```python
@@ -98,7 +99,6 @@ affiche(coeur)
 ```
 
 ![alt text](images/coeur_1.png)
-
 
 Testez la fonction `affiche(dessin_zoom(coeur,2))`
 
@@ -125,4 +125,3 @@ coeur = [
 ```python
 assert liste_zoom([1, 2, 3], 3) == [1, 1, 1, 2, 2, 2, 3, 3, 3]
 ```
-
