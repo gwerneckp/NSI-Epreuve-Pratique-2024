@@ -1,5 +1,6 @@
-# Sujet_12
-## S_12.1
+# Sujet 12
+
+## Exercice 1
 
 Écrire une fonction `tri_selection` qui prend en paramètre un tableau `tab` de nombres
 entiers (type `list`) et qui le modifie afin qu'il soit trié par ordre croissant.
@@ -15,14 +16,14 @@ def tri_selection(a):
     pass
 ```
 
-
 Exemple :
+
 ```python
 tab = [1, 52, 6, -9, 12]
 assert tri_selection(tab) == [-9, 1, 6, 12, 52]
 ```
 
-## S_12.2
+## Exercice 2
 
 Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99.
 
@@ -38,29 +39,26 @@ La fonction `randint` est utilisée.
 Si a et b sont des entiers tels que `a <= b`, `randint(a,b)` renvoie un
 nombre entier compris entre `a` et `b`.
 
-
 Compléter le code ci-dessous et le tester :
 
->```python
->from random import randint
->
->def plus_ou_moins():
->    nb_mystere = randint(1,...)
->    nb_test = int(input("Proposez un nombre entre 1 et 99 : "))
->    compteur = ...
->
->    while nb_mystere != ... and compteur < ... :
->        compteur = compteur + ...
->        if nb_mystere ... nb_test:
->            nb_test = int(input("Trop petit ! Testez encore : "))
->        else:
->            nb_test = int(input("Trop grand ! Testez encore : "))
->
->    if nb_mystere == nb_test:
->        print ("Bravo ! Le nombre était ",...)
->        print("Nombre d'essais: ",...)
->    else:
->        print ("Perdu ! Le nombre était ",...)
->
-```
+```python
+from random import randint
 
+def plus_ou_moins():
+    nb_mystere = randint(1,...)
+    nb_test = int(input("Proposez un nombre entre 1 et 99 : "))
+    compteur = ...
+
+    while nb_mystere != ... and compteur < ... :
+        compteur = compteur + ...
+        if nb_mystere ... nb_test:
+            nb_test = int(input("Trop petit ! Testez encore : "))
+        else:
+            nb_test = int(input("Trop grand ! Testez encore : "))
+
+    if nb_mystere == nb_test:
+        print ("Bravo ! Le nombre était ",...)
+        print("Nombre d'essais: ",...)
+    else:
+        print ("Perdu ! Le nombre était ",...)
+```
