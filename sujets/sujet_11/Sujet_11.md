@@ -1,15 +1,16 @@
-# Sujet_11
-## S_11.1
+# Sujet 11
+
+## Exercice 1
 
 Dans cet exercice, on considère des phrases composées de mots.
 
 - On appelle « mot » une chaîne de caractères composée avec des caractères choisis parmi les 26 lettres minuscules ou majuscules de l'alphabet,
 
-- On appelle *phrase* une chaîne de caractères :
-    - composée avec un ou plusieurs *mots* séparés entre eux par un seul caractère espace `' '`,
-    - se finissant :
-        - soit par un point `'.'` qui est alors collé au dernier mot,
-        - soit par un point d'exclamation `'!'` ou d'interrogation `'?'` qui est alors séparé du dernier mot par un seul caractère espace `' '`.
+- On appelle _phrase_ une chaîne de caractères :
+  - composée avec un ou plusieurs _mots_ séparés entre eux par un seul caractère espace `' '`,
+  - se finissant :
+    - soit par un point `'.'` qui est alors collé au dernier mot,
+    - soit par un point d'exclamation `'!'` ou d'interrogation `'?'` qui est alors séparé du dernier mot par un seul caractère espace `' '`.
 
 Voici deux exemples de phrases :
 
@@ -25,7 +26,6 @@ def nombre_de_mots(a):
     pass
 ```
 
-
 ```python
 assert nombre_de_mots("Cet exercice est simple.") == 4
 assert nombre_de_mots("Le point d exclamation est séparé !") == 6
@@ -33,7 +33,7 @@ assert nombre_de_mots("Combien de mots y a t il dans cette phrase ?") == 10
 assert nombre_de_mots("Fin.") == 1
 ```
 
-## S_11.2
+## Exercice 2
 
 Un arbre binaire de recherche est soit vide, représenté en Python par la valeur None, soit
 un nœud, contenant une étiquette et deux sous-arbres gauche et droit et représenté par
@@ -42,41 +42,32 @@ une instance de la classe Noeud donnée ci-dessous.
 On considère ici que les étiquettes des nœuds sont des entiers et que les arbres binaires de
 recherche considérés ne contiennent pas de doublons.
 
->```python
->class Noeud:
->   def __init__(self, etiquette):
->       '''Méthode constructeur pour la classe Noeud.
->       Crée une feuille d'étiquette donnée.'''
->       self.etiquette = etiquette
->       self.gauche = None
->       self.droit = None
->
->   def inserer(self, cle):
->       '''Insère la clé dans l'arbre binaire de recherche
->       en préservant sa structure.'''
->       if cle < self.etiquette:
->           if self.gauche != None:
->               ...
->           else:
->               self.gauche = ... 
->       else:
->           ...
->               ...
->           else:
->               ... = Noeud(cle)
->
-```
-
 ```python
-# Votre code ici
+class Noeud:
+  def __init__(self, etiquette):
+      '''Méthode constructeur pour la classe Noeud.
+      Crée une feuille d'étiquette donnée.'''
+      self.etiquette = etiquette
+      self.gauche = None
+      self.droit = None
+  def inserer(self, cle):
+      '''Insère la clé dans l'arbre binaire de recherche
+      en préservant sa structure.'''
+      if cle < self.etiquette:
+          if self.gauche != None:
+              ...
+          else:
+              self.gauche = ...
+      else:
+          ...
+              ...
+          else:
+              ... = Noeud(cle)
 ```
-
-
 
 Compléter la méthode récursive inserer afin qu'elle permette d'insérer une clé dans l'arbre binaire de recherche non vide sur lequel on l'appelle.
 
 Voici un exemple d'utilisation :
-
 
 ```python
 arbre = Noeud(7)
@@ -88,4 +79,3 @@ assert arbre.droit.etiquette == 9
 assert arbre.gauche.gauche.etiquette == 1
 assert arbre.gauche.droit.etiquette == 6
 ```
-
