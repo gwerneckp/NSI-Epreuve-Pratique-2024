@@ -27,3 +27,8 @@ venv/
 *.swp
 *.tmp
 .DS_Store
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
