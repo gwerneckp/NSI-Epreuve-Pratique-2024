@@ -1,5 +1,6 @@
-# Sujet_15
-## S_15.1
+# Sujet 15
+
+## Exercice 1
 
 Écrire une fonction `moyenne` qui prend en paramètre un tableau non vide de nombres
 flottants et qui renvoie la moyenne des valeurs du tableau. Les tableaux seront
@@ -10,14 +11,14 @@ def moyenne(a):
     pass
 ```
 
-
 Exemples :
+
 ```python
 assert moyenne([1.0]) == 1.0
 assert moyenne([1.0, 2.0, 4.0]) == 2.3333333333333335
 ```
 
-## S_15.2
+## Exercice 2
 
 On considère la fonction `binaire`.
 Cette fonction prend en paramètre un entier positif `a` en
@@ -29,7 +30,6 @@ l'exemple ci-après.
 ![alt text](images/image-3.png)
 
 Compléter le code de la fonction `binaire`.
-
 
 ```python
 def binaire(a):
@@ -51,4 +51,3 @@ assert binaire(83) == "1010011"
 assert binaire(127) == "1111111"
 assert binaire(0) == "0"
 ```
-
