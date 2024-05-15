@@ -1,82 +1,51 @@
-def liste_puissances(a, b):
-    pass
+from unittest import TestCase, main
 
 
-def liste_puissances_borne(a, b):
-    pass
+def liste_puissances(a: int, n: int) -> list[int]:
+    return [a ** (i + 1) for i in range(n)]
 
 
-dico = {
-    "A": 1,
-    "B": 2,
-    "C": 3,
-    "D": 4,
-    "E": 5,
-    "F": 6,
-    "G": 7,
-    "H": 8,
-    "I": 9,
-    "J": 10,
-    "K": 11,
-    "L": 12,
-    "M": 13,
-    "N": 14,
-    "O": 15,
-    "P": 16,
-    "Q": 17,
-    "R": 18,
-    "S": 19,
-    "T": 20,
-    "U": 21,
-    "V": 22,
-    "W": 23,
-    "X": 24,
-    "Y": 25,
-    "Z": 26,
-}
+def liste_puissances_borne(a: int, borne: int) -> list[int]:
+    res = []
+    n = 1
+    while (calc := a**n) < borne:
+        res.append(calc)
+        n += 1
+    return res
 
 
-def codes_parfait(mot):
-    """Renvoie un triplet
-    (code_additionne, code_concatene, mot_est_parfait) où :
-    - code_additionne est la somme des codes des lettres du mot ;
-    - code_concatene est le code des lettres du mot concaténées ;
-    - mot_est_parfait est un booléen indiquant si le mot est parfait."""
-    code_concatene = ""
-    code_additionne = ...
-    for c in mot:
-        code_concatene = code_concatene + ...
-        code_additionne = code_additionne + ...
-    code_concatene = int(code_concatene)
-    mot_est_parfait = ...
-    return code_additionne, code_concatene, mot_est_parfait
+# def codes_parfait(mot):
+#     """Renvoie un triplet
+#     (code_additionne, code_concatene, mot_est_parfait) où :
+#     - code_additionne est la somme des codes des lettres du mot ;
+#     - code_concatene est le code des lettres du mot concaténées ;
+#     - mot_est_parfait est un booléen indiquant si le mot est parfait."""
+#     code_concatene = ""
+#     code_additionne = ...
+#     for c in mot:
+#         code_concatene = code_concatene + ...
+#         code_additionne = code_additionne + ...
+#     code_concatene = int(code_concatene)
+#     mot_est_parfait = ...
+#     return code_additionne, code_concatene, mot_est_parfait
 
 
-dico = {
-    "A": 1,
-    "B": 2,
-    "C": 3,
-    "D": 4,
-    "E": 5,
-    "F": 6,
-    "G": 7,
-    "H": 8,
-    "I": 9,
-    "J": 10,
-    "K": 11,
-    "L": 12,
-    "M": 13,
-    "N": 14,
-    "O": 15,
-    "P": 16,
-    "Q": 17,
-    "R": 18,
-    "S": 19,
-    "T": 20,
-    "U": 21,
-    "V": 22,
-    "W": 23,
-    "X": 24,
-    "Y": 25,
-    "Z": 26,
-}
+class TestSujet19(TestCase):
+    def test_liste_puissance_case_1(self) -> None:
+        self.assertListEqual(liste_puissances(3, 5), [3, 9, 27, 81, 243])
+
+    def test_liste_puissance_case_2(self) -> None:
+        self.assertListEqual(liste_puissances(-2, 4), [-2, 4, -8, 16])
+
+    def test_liste_puissance_case_3(self) -> None:
+        self.assertListEqual(liste_puissances_borne(2, 16), [2, 4, 8])
+
+    def test_liste_puissance_case_4(self) -> None:
+        self.assertListEqual(liste_puissances_borne(2, 17), [2, 4, 8, 16])
+
+    def test_liste_puissance_case_5(self) -> None:
+        self.assertListEqual(liste_puissances_borne(5, 5), [])
+
+
+if __name__ == "__main__":
+    main()
