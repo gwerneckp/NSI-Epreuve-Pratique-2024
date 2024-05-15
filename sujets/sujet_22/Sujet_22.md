@@ -1,5 +1,6 @@
-# Sujet_22
-## S_22.1
+# Sujet 22
+
+## Exercice 1
 
 Écrire une fonction `recherche_indices_classement` qui prend en paramètres un
 entier `elt` et un tableau d'entiers `tab`, et qui renvoie trois listes :
@@ -12,7 +13,6 @@ entier `elt` et un tableau d'entiers `tab`, et qui renvoie trois listes :
 def recherche_indices_classement(a, b):
     pass
 ```
-
 
 Exemples :
 
@@ -27,7 +27,7 @@ assert recherche_indices_classement(3, [1, 1, 1, 1]) == ([0, 1, 2, 3], [], [])
 assert recherche_indices_classement(3, []) == ([], [], [])
 ```
 
-## S_22.2
+## Exercice 2
 
 Une professeure de NSI décide de gérer les résultats de sa classe sous la forme d'un
 dictionnaire :
@@ -62,29 +62,24 @@ Le professeur crée une fonction moyenne qui prend en paramètre le nom d'un de 
 
 Compléter le code de la professeure ci-dessous :
 
->```python
->def moyenne(nom, resultats):
->    '''Renvoie la moyenne de l'élève nom, selon le dictionnaire 
->    resultats. Si nom n'est pas dans le dictionnaire, 
->    la fonction renvoie None.'''
->    if nom in ...: 
->        notes = resultats[nom]
->        if ...: # pas de notes 
->            return 0
->        total_points = ... 
->        total_coefficients = ... 
->        for ...  in notes.values(): 
->            note, coefficient = valeurs
->            total_points = total_points + ... * coefficient 
->            ... = ... + coefficient 
->        return round( ... / total_coefficients, 1 ) 
->    else:
->        return None
->
-```
-
 ```python
-# Votre code ici
+def moyenne(nom, resultats):
+    '''Renvoie la moyenne de l'élève nom, selon le dictionnaire
+    resultats. Si nom n'est pas dans le dictionnaire,
+    la fonction renvoie None.'''
+    if nom in ...:
+        notes = resultats[nom]
+        if ...: # pas de notes
+            return 0
+        total_points = ...
+        total_coefficients = ...
+        for ...  in notes.values():
+            note, coefficient = valeurs
+            total_points = total_points + ... * coefficient
+            ... = ... + coefficient
+        return round( ... / total_coefficients, 1 )
+    else:
+        return None
 ```
 
 Exemples :
@@ -110,4 +105,3 @@ resultats = {
 assert moyenne("Dupont", resultats) == 14.5
 assert moyenne("Durand", resultats) == 8.5
 ```
-
