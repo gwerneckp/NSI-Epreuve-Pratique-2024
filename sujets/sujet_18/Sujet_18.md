@@ -1,5 +1,6 @@
-# Sujet_18
-## S_18.1
+# Sujet 18
+
+## Exercice 1
 
 Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers relatifs
 `n1` et `n2`, et qui renvoie le produit de ces deux nombres.
@@ -11,7 +12,6 @@ def multiplication(a, b):
     pass
 ```
 
-
 Exemples :
 
 ```python
@@ -21,12 +21,12 @@ assert multiplication(-2, 6) == -12
 assert multiplication(-2, 0) == 0
 ```
 
-## S_18.2
+## Exercice 2
 
 Soit `tab` un tableau non vide d'entiers triés dans l'ordre croissant et `n` un entier.
 
 La fonction `chercher` ci-dessous doit renvoyer un indice où la valeur `n`
-apparaît dans `tab` si cette valeur y figure et `None` sinon. 
+apparaît dans `tab` si cette valeur y figure et `None` sinon.
 
 Les paramètres de la fonction sont :
 
@@ -57,6 +57,7 @@ def chercher(tab, x, i, j):
     else:
         return ...
 ```
+
 Exemples :
 
 ```python
@@ -65,4 +66,3 @@ assert chercher([1, 5, 6, 6, 9, 12], 7, 0, 5) == None
 assert chercher([1, 5, 6, 6, 9, 12], 9, 0, 5) == 4
 assert chercher([1, 5, 6, 6, 9, 12], 6, 0, 5) == 2
 ```
-
