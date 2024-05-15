@@ -1,5 +1,6 @@
-# Sujet_24
-## S_24.1
+# Sujet 24
+
+## Exercice 1
 
 Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soit un nœud représenté par un triplet `(g, x, d)` où `x` est l'étiquette du nœud et `g` et `d` sont les sous-arbres gauche et droit.
 
@@ -9,7 +10,6 @@ On souhaite écrire une fonction `parcours_largeur` qui prend en paramètre un a
 def parcours_largeur(a):
     pass
 ```
-
 
 Exemples :
 
@@ -22,25 +22,21 @@ arbre = (
 assert parcours_largeur(arbre) == [4, 2, 6, 1, 3, 5, 7]
 ```
 
-## S_24.2
+## Exercice 2
 
 On considère un tableau non vide de nombre entiers, positifs ou négatifs, et on souhaite déterminer la plus grande somme possible de ses éléments consécutifs.
 
-
 Par exemple, dans le tableau `[1, -2, 3, 10, -4, 7, 2, -5]`, la plus grande somme est 18 obtenue en additionnant les éléments 3, 10, -4, 7, 2.
-
 
 Pour cela, on va résoudre le problème par programmation dynamique. Si on note `tab` le tableau considéré et `i` un indice dans ce tableau, on se ramène à un problème plus simple : déterminer la plus grande somme possible de ses éléments consécutifs se terminant à
 l'indice `i`.
-
 
 Si on connait la plus grande somme possible de ses éléments consécutifs se terminant à l'indice `i-1`, on peut déterminer la plus grande somme possible de ses éléments consécutifs se terminant à l'indice `i` :
 
 - soit on obtient une plus grande somme en ajoutant `tab[i]` à cette somme précédente ;
 - soit on commence une nouvelle somme à partir de `tab[i]`.
 
-*Remarque :* les sommes considérées contiennent toujours au moins un terme.
-
+_Remarque :_ les sommes considérées contiennent toujours au moins un terme.
 
 Compléter la fonction `somme_max` ci-dessous qui réalise cet algorithme.
 
