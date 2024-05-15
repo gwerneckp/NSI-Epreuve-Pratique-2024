@@ -1,12 +1,13 @@
-# Sujet_19
-## S_19.1
+# Sujet 19
+
+## Exercice 1
 
 On rappelle que :
 
 - le nombre $a^n$ est le nombre $a \times a \times a \times \dots \times a$, où le facteur $a$ apparaît $n$ fois,
 - en langage Python, l'instruction `t[-1]` permet d'accéder au dernier élément du tableau `t`.
 
-Dans cet exercice, l'opérateur ```**```  et la fonction `pow` ne sont pas autorisés.
+Dans cet exercice, l'opérateur `**` et la fonction `pow` ne sont pas autorisés.
 
 Programmer en langage Python une fonction `liste_puissances` qui prend en arguments un nombre entier `a`, un entier strictement positif `n` et qui renvoie la liste de ses puissances $\rm{[a^1, a^2, ..., a^n]}$.
 
@@ -21,7 +22,6 @@ def liste_puissances_borne(a, b):
     pass
 ```
 
-
 Exemples :
 
 ```python
@@ -32,18 +32,17 @@ assert liste_puissances_borne(2, 17) == [2, 4, 8, 16]
 assert liste_puissances_borne(5, 5) == []
 ```
 
-## S_19.2
+## Exercice 2
 
 On affecte à chaque lettre de l'alphabet un code selon le tableau ci-dessous :
 
-| A | B | C | D | E | F | G | H | I | J | K | L | M |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
+|  A  |  B  |  C  |  D  |  E  |  F  |  G  |  H  |  I  |  J  |  K  |  L  |  M  |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+|  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  | 12  | 13  |
 
-
-| N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 
+|  N  |  O  |  P  |  Q  |  R  |  S  |  T  |  U  |  V  |  W  |  X  |  Y  |  Z  |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 14  | 15  | 16  | 17  | 18  | 19  | 20  | 21  | 22  | 23  | 24  | 25  | 26  |
 
 Cette table de correspondance est stockée dans un dictionnaire `dico` où les clés sont les
 lettres de l'alphabet et les valeurs les codes correspondants.
@@ -144,4 +143,3 @@ dico = {
 assert codes_parfait("PAUL") == (50, 1612112, False)
 assert codes_parfait("ALAIN") == (37, 1121914, True)
 ```
-
