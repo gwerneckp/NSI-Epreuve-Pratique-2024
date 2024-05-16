@@ -7,14 +7,8 @@ def parcours_largeur(noeud: Node) -> list[int]:
     if not noeud:
         return []
 
-    visited = [noeud[1]]
-    to_visit = []
-
-    if noeud[0]:
-        to_visit.append(noeud[0])
-
-    if noeud[2]:
-        to_visit.append(noeud[2])
+    visited = []
+    to_visit = [noeud]
 
     while to_visit:
         noeud = to_visit.pop(0)
