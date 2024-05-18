@@ -1,21 +1,28 @@
+from typing import Literal
 from unittest import TestCase, main
 
 
-def recherche_min(tab):
-    pass
+def recherche_min(tab: list[int]) -> int:
+    min_i, min_v = 0, tab[0]
+
+    for i, v in enumerate(tab):
+        if v < min_v:
+            min_i, min_v = i, v
+
+    return min_i
 
 
-def separe(tab):
+def separe(tab: list[Literal[0, 1]]) -> list[Literal[0, 1]]:
     """Separe les 0 et les 1 dans le tableau tab"""
     gauche = 0
-    droite = ...
+    droite = len(tab) - 1
     while gauche < droite:
         if tab[gauche] == 0:
-            gauche = ...
+            gauche = gauche + 1
         else:
-            tab[gauche] = ...
-            tab[droite] = ...
-            droite = ...
+            tab[gauche] = tab[droite]
+            tab[droite] = 1
+            droite = droite - 1
     return tab
 
 
