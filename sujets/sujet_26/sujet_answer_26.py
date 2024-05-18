@@ -1,30 +1,34 @@
 from unittest import TestCase, main
-
 from random import randint
 
 
-def ajoute_dictionnaires(d1, d2):
-    pass
+def ajoute_dictionnaires(d1: dict[int, int], d2: dict[int, int]) -> dict[int, int]:
+    d_res: dict[int, int] = {}
+    for d in [d1, d2]:
+        for k in d.keys():
+            d_res[k] = d1.get(k, 0) + d2.get(k, 0)
+    
+    return d_res
 
 
-def nombre_coups():
-    """Simule un jeu de plateau avec 12 cases et renvoie le nombre
-    minimal de coups pour visiter toutes les cases."""
-    nombre_cases = 12
-    # indique si une case a été vue
-    cases_vues = [False] * nombre_cases
-    nombre_cases_vues = 1
-    cases_vues[0] = True
-    case_en_cours = 0
-    n = ...
-    while ... < ...:
-        x = randint(1, 6)
-        case_en_cours = (case_en_cours + ...) % ...
-        if ...:
-            cases_vues[case_en_cours] = True
-            nombre_cases_vues = ...
-        n = ...
-    return n
+# def nombre_coups():
+#     """Simule un jeu de plateau avec 12 cases et renvoie le nombre
+#     minimal de coups pour visiter toutes les cases."""
+#     nombre_cases = 12
+#     # indique si une case a été vue
+#     cases_vues = [False] * nombre_cases
+#     nombre_cases_vues = 1
+#     cases_vues[0] = True
+#     case_en_cours = 0
+#     n = ...
+#     while ... < ...:
+#         x = randint(1, 6)
+#         case_en_cours = (case_en_cours + ...) % ...
+#         if ...:
+#             cases_vues[case_en_cours] = True
+#             nombre_cases_vues = ...
+#         n = ...
+#     return n
 
 
 class TestSujet26(TestCase):
@@ -42,3 +46,4 @@ class TestSujet26(TestCase):
 
 if __name__ == "__main__":
     main()
+
