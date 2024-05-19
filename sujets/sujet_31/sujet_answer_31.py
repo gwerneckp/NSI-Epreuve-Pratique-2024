@@ -1,6 +1,15 @@
 from unittest import TestCase, main
 
-def dichotomie(tab, x):
+
+def multiplication(n1: int, n2: int) -> float:
+    n1, n2 = (-n1, -n2) if n1 < 0 else (n1, n2)
+    res: int = 0
+    for _ in range(n1):
+        res += n2
+    return res
+
+
+def dichotomie(tab: list[int], x: int) -> bool:
     """
     tab : tableau d'entiers trié dans l'ordre croissant
     x : nombre entier
@@ -9,14 +18,15 @@ def dichotomie(tab, x):
     debut = 0
     fin = len(tab) - 1
     while debut <= fin:
-        m = ... 
+        m = (debut + fin) // 2
         if x == tab[m]:
-            return ... 
+            return True
         if x > tab[m]:
             debut = m + 1
         else:
-            fin = ... 
-    return ...
+            fin = m - 1
+    return False
+
 
 class TestSujet31(TestCase):
     def test_multiplication_case_1(self) -> None:
@@ -32,10 +42,11 @@ class TestSujet31(TestCase):
         self.assertEqual(multiplication(-2, 0), 0)
 
     def test_dichotomie_case_1(self) -> None:
-        self.assertTrue(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],28))
+        self.assertTrue(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 28))
 
     def test_dichotomie_case_2(self) -> None:
-        self.assertFalse(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],27))
+        self.assertFalse(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 27))
+
 
 if __name__ == "__main__":
     main()
