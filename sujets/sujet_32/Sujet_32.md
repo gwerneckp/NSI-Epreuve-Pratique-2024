@@ -9,7 +9,7 @@ Ainsi :
 - 0 ⊕ 0 = 0
 - 0 ⊕ 1 = 1
 - 1 ⊕ 0 = 1
-- 1 ⊕ 1 = 0  
+- 1 ⊕ 1 = 0
 
 Écrire une fonction `ou_exclusif` qui prend en paramètres deux tableaux de 0 ou de 1 de
 même longueur et qui renvoie un tableau où l'élément situé à position `i` est le résultat, par
@@ -27,21 +27,22 @@ l'opérateur « ou exclusif », des éléments à la position `i` des tableaux p
 Dans cet exercice, on appelle carré d'ordre $n$ un tableau de $n$ lignes et $n$ colonnes dont chaque case contient un entier naturel.
 
 Exemples :
-![image](data2023/35_carre.png){: .center}
+
+![image](images/image-11.png)
 
 Un carré est dit semimagique lorsque les sommes des éléments situés sur chaque ligne, chaque
 colonne sont égales.
 
 - Ainsi c2 et c3 sont semimagiques car la somme de chaque
-ligne, chaque colonne et chaque diagonale est égale à 8 pour c2 et 12 pour c3.
+  ligne, chaque colonne et chaque diagonale est égale à 8 pour c2 et 12 pour c3.
 
 - Le carre c3bis n'est pas semimagique car la somme de la première ligne est égale à 15 alors que celle de la deuxième ligne
-est égale à 10.
+  est égale à 10.
 
 La classe `Carre` ci-après contient des méthodes qui permettent de manipuler des carrés.
 
 - La méthode constructeur crée un carré sous forme d'un tableau à deux dimensions
-à partir d'une liste d'entiers, et d'un ordre.
+  à partir d'une liste d'entiers, et d'un ordre.
 
 - La méthode `affiche` permet d'afficher le carré créé.
 
@@ -57,9 +58,9 @@ Exemple :
 ```
 
 Compléter la méthode `est_semimagique` qui renvoie `True` si le carré est semimagique,
-`False` sinon. 
+`False` sinon.
 
-```python 
+```python
 class Carre:
     def __init__(self, liste, n):
         self.ordre = n
