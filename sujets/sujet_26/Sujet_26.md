@@ -29,7 +29,7 @@ Exemples :
 On considère une piste carrée qui contient 4 cases par côté. Les cases sont numérotées
 de 0 inclus à 12 exclu comme ci-dessous :
 
-![image](data2023/20_carre.png){: .center width=20%}
+![image](images/image-7.png)
 
 L'objectif de l'exercice est d'implémenter le jeu suivant :
 
