@@ -1,6 +1,11 @@
 from unittest import TestCase, main
 
-def crible(n):
+
+def renverse(mot: str) -> str:
+    return mot[::-1]
+
+
+def crible(n: int) -> list[int]:
     """Renvoie un tableau contenant tous les nombres premiers
     plus petits que n."""
     premiers = []
@@ -8,12 +13,13 @@ def crible(n):
     tab[0], tab[1] = False, False
     for i in range(n):
         if tab[i]:
-            premiers.... 
-            multiple = ... 
+            premiers.append(i)
+            multiple = 2 * i
             while multiple < n:
-                tab[multiple] = ... 
-                multiple = ... 
+                tab[multiple] = False
+                multiple += i
     return premiers
+
 
 class TestSujet33(TestCase):
     def test_renverse_case_1(self) -> None:
@@ -30,6 +36,7 @@ class TestSujet33(TestCase):
 
     def test_crible_case_2(self) -> None:
         self.assertEqual(crible(5), [2, 3])
+
 
 if __name__ == "__main__":
     main()
