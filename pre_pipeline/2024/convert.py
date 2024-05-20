@@ -29,7 +29,9 @@ def transform_repl_into_unittest(code: str) -> str:
             result = result.strip()
 
         # Add the test method to the class string
-        class_str += f"    def test_{function_name}_case_{i}(self) -> None:\n"
+        class_str += (
+            f"    def test_{function_name.replace('.', '_')}_case_{i}(self) -> None:\n"
+        )
         if assertion == "assertEqual":
             class_str += f"        self.{assertion}({call}, {result})\n"
         else:
