@@ -6,7 +6,6 @@ Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soi
 contenant une étiquette et deux sous-arbres gauche et droit et représenté par une instance
 de la classe `Noeud` donnée ci-dessous.
 
-
 ```python
 class Noeud:
     def __init__(self, etiquette, gauche, droit):
@@ -15,9 +14,10 @@ class Noeud:
         self.droit = droit
 ```
 
-![image](data2023/29_arbre1.png){: .center}
+![image](images/image-12.png)
 
 L'arbre ci-dessus sera donc implémenté de la manière suivante :
+
 ```python
 a = Noeud(1, Noeud(4, None, None), Noeud(0, None, Noeud(7, None, None)))
 ```
@@ -29,8 +29,6 @@ taille de l'arbre que cette instance implémente.
 renvoie la hauteur de l'arbre que cette instance implémente.
 
 On considère que la hauteur d'un arbre vide est -1 et la taille d'un arbre vide est 0.
-
-
 
 Exemples :
 
@@ -79,17 +77,17 @@ Exemples :
 
 Compléter et tester le code ci-dessous :
 
-```python 
+```python
 def ajoute(indice, element, tab):
     '''Renvoie un nouveau tableau obtenu en insérant
     element à l'indice indice dans le tableau tab.'''
     nbre_elts = len(tab)
     tab_ins = [0] * (nbre_elts + 1)
     for i in range(indice):
-        tab_ins[i] = ... 
-    tab_ins[...] = ... 
+        tab_ins[i] = ...
+    tab_ins[...] = ...
     for i in range(indice + 1, nbre_elts + 1):
-        tab_ins[i] = ... 
+        tab_ins[i] = ...
     return tab_ins
 
 ```
