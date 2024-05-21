@@ -1,21 +1,30 @@
 from unittest import TestCase, main
 
-def dichotomie(tab, x):
+
+def moyenne(tab: list[int]) -> float:
+    total: int = 0
+    for v in tab:
+        total += v
+    return total / len(tab)
+
+
+def dichotomie(tab: list[int], x: int) -> bool:
     """applique une recherche dichotomique pour déterminer
     si x est dans le tableau trié tab.
     La fonction renvoie True si tab contient x et False sinon"""
 
     debut = 0
-    fin = ... 
+    fin = len(tab) - 1
     while debut <= fin:
-        m = ... 
+        m = (debut + fin) // 2
         if x == tab[m]:
-            return ... 
+            return True
         if x > tab[m]:
-            debut = ... 
+            debut = m + 1
         else:
-            fin = ... 
+            fin = m - 1
     return False
+
 
 class TestSujet42(TestCase):
     def test_moyenne_case_1(self) -> None:
@@ -38,6 +47,7 @@ class TestSujet42(TestCase):
 
     def test_dichotomie_case_4(self) -> None:
         self.assertFalse(dichotomie([], 28))
+
 
 if __name__ == "__main__":
     main()
