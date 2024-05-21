@@ -6,7 +6,7 @@ On s'intéresse à la suite d'entiers définie par :
 
 - les deux premières valeurs sont égales à 1 ;
 - ensuite, chaque valeur est obtenue en faisant la somme des deux valeurs qui la précè-
-dent.
+  dent.
 
 La troisième valeur est donc $1+1 = 2$, la quatrième est $1+2 = 3$, la cinquième est $2+3 = 5$,
 la sixième est $3 + 5 = 8$, et ainsi de suite.
@@ -32,15 +32,15 @@ Exemples :
 On considère la fonction `eleves_du_mois` prenant en paramètres `eleves` et `notes` deux
 tableaux de même longueur, le premier contenant le nom des élèves et le second, des
 entiers positifs désignant leur note à un contrôle de sorte que `eleves[i]` a obtenu la
-note `notes[i]`.  
+note `notes[i]`.
 
 Cette fonction renvoie le couple constitué de la note maximale attribuée et des noms
-des élèves ayant obtenu cette note regroupés dans un tableau.  
+des élèves ayant obtenu cette note regroupés dans un tableau.
 
 Ainsi, l'instruction `eleves_du_mois(['a', 'b', 'c', 'd'], [15, 18, 12, 18])` renvoie
 le couple `(18, ['b', 'd'])`.
 
-```python 
+```python
 def eleves_du_mois(eleves, notes):
     note_maxi = 0
     meilleurs_eleves =  ...

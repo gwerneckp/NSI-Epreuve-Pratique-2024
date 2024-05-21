@@ -15,33 +15,32 @@ Exemple :
 "euqitamrofni"
 ```
 
-
 ## Exercice 2
 
 Un nombre premier est un nombre entier naturel qui admet exactement deux diviseurs distincts
-entiers et positifs : 1 et lui-même. 
+entiers et positifs : 1 et lui-même.
 
 Le crible d'Ératosthène permet de déterminer les nombres premiers plus petit qu'un certain
-nombre `n` fixé. 
+nombre `n` fixé.
 
 On considère pour cela un tableau `tab` de `n`booléens, initialement tous égaux à `True`, sauf
-`tab[0]` et `tab[1]` qui valent `False`, 0 et 1 n'étant pas des nombres premiers.  
+`tab[0]` et `tab[1]` qui valent `False`, 0 et 1 n'étant pas des nombres premiers.
 
-On parcourt alors ce tableau de gauche à droite.  
+On parcourt alors ce tableau de gauche à droite.
 
 Pour chaque indice `i` :
 
 - si `tab[i]` vaut `True` : le nombre `i` est premier et on donne la valeur `False` à toutes les
-cases du tableau dont l'indice est un multiple de `i`, à partir de `2*i` (c'est-à-dire `2*i`, `3*i` ...).
+  cases du tableau dont l'indice est un multiple de `i`, à partir de `2*i` (c'est-à-dire `2*i`, `3*i` ...).
 
 - si `tab[i]` vaut `False` : le nombre `i` n'est pas premier et on n'effectue aucun
-changement sur le tableau. 
+  changement sur le tableau.
 
 On dispose de la fonction `crible`, incomplète et donnée ci-dessous, prenant en paramètre un
 entier `n` strictement positif et renvoyant un tableau contenant tous les nombres premiers plus
 petits que `n`.
 
-```python 
+```python
 def crible(n):
     """Renvoie un tableau contenant tous les nombres premiers
     plus petits que n."""
@@ -50,11 +49,11 @@ def crible(n):
     tab[0], tab[1] = False, False
     for i in range(n):
         if tab[i]:
-            premiers.... 
-            multiple = ... 
+            premiers....
+            multiple = ...
             while multiple < n:
-                tab[multiple] = ... 
-                multiple = ... 
+                tab[multiple] = ...
+                multiple = ...
     return premiers
 
 ```
@@ -67,4 +66,3 @@ Exemples :
 >>> crible(5)
 [2, 3]
 ```
-

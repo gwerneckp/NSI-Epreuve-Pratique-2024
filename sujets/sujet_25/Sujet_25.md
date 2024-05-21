@@ -5,6 +5,7 @@
 Écrire une fonction `recherche_min` qui prend en paramètre un tableau de nombres `tab`, et qui renvoie l'indice de la première occurrence du minimum de ce tableau. Les tableaux seront représentés sous forme de liste Python.
 
 Exemples :
+
 ```python
 >>> recherche_min([5])
 0
@@ -22,18 +23,18 @@ On considère la fonction `separe` ci-dessous qui prend en argument un tableau `
 les éléments sont des `0` et des `1` et qui sépare les `0` des `1` en plaçant les `0` en début de
 tableau et les `1` à la suite.
 
-```python 
+```python
 def separe(tab):
     '''Separe les 0 et les 1 dans le tableau tab'''
     gauche = 0
-    droite = ... 
+    droite = ...
     while gauche < droite:
         if tab[gauche] == 0 :
-            gauche = ... 
+            gauche = ...
         else :
-            tab[gauche] = ... 
-            tab[droite] = ... 
-            droite = ... 
+            tab[gauche] = ...
+            tab[droite] = ...
+            droite = ...
     return tab
 
 ```
@@ -56,39 +57,35 @@ tab = [1, 0, 1, 0, 1, 0, 1, 0]
        ^                    ^
 ```
 
-
-
 - **Etape 1 :** on regarde la première case, qui contient un 1 : ce 1 va aller dans la seconde partie du tableau final et on l'échange avec la dernière case.
-Il est à présent bien positionné : on ne prend plus la dernière case en compte.  
+  Il est à présent bien positionné : on ne prend plus la dernière case en compte.
+
 ```python
 tab = [0, 0, 1, 0, 1, 0, 1, 1]
        ^                 ^
 ```
 
+- **Etape 2 :** on regarde à nouveau la première case, qui contient maintenant un 0 : ce 0 va aller dans la première partie du tableau final et est bien positionné : on ne prend plus la première case en compte.
 
-- **Etape 2 :** on regarde à nouveau la première case, qui contient maintenant un 0 : ce 0 va aller dans la première partie du tableau final et est bien positionné : on ne prend plus la première case en compte.  
 ```python
 tab = [0, 0, 1, 0, 1, 0, 1, 1]
           ^              ^
 ```
 
+- **Etape 3 :** on regarde la seconde case, qui contient un 0 : ce 0 va aller dans la première partie du tableau final et est bien positionné : on ne prend plus la seconde case en compte.
 
-
-- **Etape 3 :** on regarde la seconde case, qui contient un 0 : ce 0 va aller dans la première partie du tableau final et est bien positionné : on ne prend plus la seconde case en compte.  
 ```python
 tab = [0, 0, 1, 0, 1, 0, 1, 1]
              ^           ^
 ```
 
-
-
 - **Etape 4 :** on regarde la troisième case, qui contient un 1 : ce 1 va aller dans la seconde partie du tableau final et on l'échange avec l'avant-dernière case.
-Il est à présent bien positionné : on ne prend plus l'avant-dernière case en compte.  
+  Il est à présent bien positionné : on ne prend plus l'avant-dernière case en compte.
+
 ```python
 tab = [0, 0, 1, 0, 1, 0, 1, 1]
              ^        ^
 ```
-
 
 Et ainsi de suite...
 

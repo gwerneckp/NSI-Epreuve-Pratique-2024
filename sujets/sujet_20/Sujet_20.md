@@ -1,4 +1,5 @@
 # Sujet_20
+
 ## Exercice 1
 
 Dans cet exercice les tableaux sont représentés par des listes Python (type `list`).
@@ -30,10 +31,10 @@ Exemples :
 `>>>> paire_6(lancer1)`  
 `True`  
 `>>>>lancer2 = lancer(5)`
-`[6, 5, 1, 6, 6]`   
-`>>>> paire_6(lancer2)`   
-`True`   
-`>>>> lancer3 = lancer(3)`   
+`[6, 5, 1, 6, 6]`  
+`>>>> paire_6(lancer2)`  
+`True`  
+`>>>> lancer3 = lancer(3)`  
 `[2, 2, 6]`  
 `>>>> paire_6(lancer3)`  
 `False`  
@@ -47,14 +48,11 @@ Exemples :
 On considère une image en 256 niveaux de gris que l'on représente par une grille de
 nombres, c'est-à-dire une liste composée de sous-listes toutes de longueurs identiques.
 
-
 La largeur de l'image est donc la longueur d'une sous-liste et la hauteur de l'image est le
 nombre de sous-listes.
 
-
 Chaque sous-liste représente une ligne de l'image et chaque élément des sous-listes est
 un entier compris entre 0 et 255, représentant l'intensité lumineuse du pixel.
-
 
 Le négatif d'une image est l'image constituée des pixels `x_n` tels que `x_n + x_i = 255` où `x_i` est le pixel correspondant de l'image initiale.
 
@@ -125,4 +123,3 @@ assert binaire(img, 120) == [
     [1, 0, 0, 1, 1],
 ]
 ```
-

@@ -8,10 +8,10 @@ où :
 
 - `maxi` est le plus grand élément du tableau `tab` ;
 - `indices` est une liste Python contenant les indices du tableau `tab` où apparaît ce
-plus grand élément.
-
+  plus grand élément.
 
 Exemple :
+
 ```python
 >>> indices_maxi([1, 5, 6, 9, 1, 2, 3, 7, 9, 8])
 (9, [3, 8])
@@ -39,29 +39,28 @@ et qui renvoie une nouvelle pile contenant les mêmes éléments que la pile ini
 dans l'ordre inverse. Cette fonction sera également amenée à modifier la pile passée en
 paramètre.
 
-
 Compléter le code Python des fonctions `renverse` et `positifs` ci-après
 
-```python 
+```python
 def renverse(pile):
     '''renvoie une pile contenant les mêmes éléments que pile,
     mais dans l'ordre inverse.
     Cette fonction détruit pile.'''
-    pile_inverse = ... 
+    pile_inverse = ...
     while pile != []:
-        ... .append(...) 
-    return ... 
+        ... .append(...)
+    return ...
 
 
 def positifs(pile):
     '''renvoie une pile contenant les éléments positifs de pile,
     dans le même ordre. Cette fonction détruit pile.'''
-    pile_positifs = ... 
+    pile_positifs = ...
     while pile != []:
-        ... = pile.pop() 
-        if ... >= 0: 
+        ... = pile.pop()
+        if ... >= 0:
             ...
-    return ... 
+    return ...
 
 
 
@@ -69,6 +68,7 @@ def positifs(pile):
 ```
 
 Exemple :
+
 ```python
 >>> renverse([1, 2, 3, 4, 5])
 [5, 4, 3, 2, 1]

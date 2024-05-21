@@ -5,7 +5,7 @@
 Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers relatifs
 `n1` et `n2`, et qui renvoie le produit de ces deux nombres.
 
-Les seules opérations autorisées sont l'addition et la soustraction. 
+Les seules opérations autorisées sont l'addition et la soustraction.
 
 ```python
 >>> multiplication(3, 5)
@@ -24,7 +24,7 @@ On s'intéresse dans cet exercice à la recherche dichotomique dans un tableau t
 tiers.
 Compléter la fonction suivante en respectant la spécification.
 
-```python 
+```python
 def dichotomie(tab, x):
     """
     tab : tableau d'entiers trié dans l'ordre croissant
@@ -34,18 +34,19 @@ def dichotomie(tab, x):
     debut = 0
     fin = len(tab) - 1
     while debut <= fin:
-        m = ... 
+        m = ...
         if x == tab[m]:
-            return ... 
+            return ...
         if x > tab[m]:
             debut = m + 1
         else:
-            fin = ... 
-    return ... 
+            fin = ...
+    return ...
 
 ```
 
 Exemples :
+
 ```python
 >>> dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],28)
 True

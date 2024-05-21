@@ -8,10 +8,10 @@ la façon suivante :
 
 - Les clés de `d` sont celles de `d1` et celles de `d2` réunies.
 - Si une clé est présente dans les deux dictionnaires `d1` et `d2`, sa valeur associée
-dans le dictionnaire `d` est la somme de ses valeurs dans les dictionnaires `d1` et `d2`.
+  dans le dictionnaire `d` est la somme de ses valeurs dans les dictionnaires `d1` et `d2`.
 - Si une clé n'est présente que dans un des deux dictionnaires, sa valeur associée
-dans le dictionnaire `d` est la même que sa valeur dans le dictionnaire où elle est
-présente.
+  dans le dictionnaire `d` est la même que sa valeur dans le dictionnaire où elle est
+  présente.
 
 Exemples :
 
@@ -48,7 +48,7 @@ lancers aléatoires nécessaires pour terminer le jeu.
 
 Proposer ensuite quelques tests pour en vérifier le fonctionnement.
 
-```python 
+```python
 from random import randint
 
 def nombre_coups():
@@ -60,14 +60,14 @@ def nombre_coups():
     nombre_cases_vues = 1
     cases_vues[0] = True
     case_en_cours = 0
-    n = ... 
-    while ... < ...: 
+    n = ...
+    while ... < ...:
         x = randint(1, 6)
-        case_en_cours = (case_en_cours + ...) % ... 
-        if ...: 
+        case_en_cours = (case_en_cours + ...) % ...
+        if ...:
             cases_vues[case_en_cours] = True
-            nombre_cases_vues = ... 
-        n = ... 
+            nombre_cases_vues = ...
+        n = ...
     return n
 
 
