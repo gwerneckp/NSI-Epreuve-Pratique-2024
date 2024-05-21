@@ -10,6 +10,7 @@ Cette fonction doit renvoyer un indice correspondant au nombre cherché s'il est
 tableau, `None` sinon.
 
 Exemples :
+
 ```python
 >>> recherche([2, 3, 4, 5, 6], 5)
 3
@@ -30,7 +31,7 @@ La fonction `cesar` prend en paramètres une chaîne de caractères `message` et
 entier `decalage` et renvoie le nouveau message codé avec le codage de César utilisant
 le décalage `decalage`.
 
-```python 
+```python
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def position_alphabet(lettre):
@@ -41,17 +42,17 @@ def cesar(message, decalage):
     '''Renvoie le message codé par la méthode de César
     pour le decalage donné'''
     resultat = ''
-    for ... in message: 
+    for ... in message:
         if 'A' <= c and c <= 'Z':
-            indice = (...) % 26 
+            indice = (...) % 26
             resultat = resultat + alphabet[indice]
         else:
-            resultat = ... 
+            resultat = ...
     return resultat
 
 ```
 
-Compléter la fonction ```cesar```.
+Compléter la fonction `cesar`.
 
 Exemples :
 
@@ -60,4 +61,4 @@ Exemples :
 'FSRNSYV E XSYW. ZMZI PE QEXMIVI RWM !'
 >>> cesar('GTSOTZW F YTZX. ANAJ QF RFYNJWJ SXN !', -5)
 'BONJOUR A TOUS. VIVE LA MATIERE NSI !'
-``` 
+```

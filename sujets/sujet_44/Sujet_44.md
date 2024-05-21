@@ -23,11 +23,11 @@ Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soi
 contenant une étiquette et deux sous-arbres gauche et droit et représenté par une instance
 de la classe `Noeud` donnée ci-dessous.
 
-```python 
+```python
 class Noeud:
     """Classe représentant un noeud d'un arbre binaire"""
     def __init__(self, etiquette, gauche, droit):
-        """Crée un noeud de valeur etiquette avec 
+        """Crée un noeud de valeur etiquette avec
         gauche et droit comme fils."""
         self.etiquette = etiquette
         self.gauche = gauche
@@ -55,14 +55,13 @@ dans l'arbre, et qui :
 - renvoie l'arbre après l'avoir modifié en insérant `cle` sinon ;
 - garantit que l'arbre ainsi complété soit encore un arbre binaire de recherche.
 
-
 Tester ensuite ce code en utilisant la fonction `parcours` et en insérant successivement
 des nœuds d'étiquette 1, 4, 6 et 8 dans l'arbre binaire de recherche représenté ci-
 dessous :
 
-![image](data2023/25_arbre.png){: .center width=15%}
+![image](images/image-14.png)
 
-```python 
+```python
 def insere(arbre, cle):
     """insere la cle dans l'arbre binaire de recherche
     représenté par arbre.
@@ -70,9 +69,9 @@ def insere(arbre, cle):
     if arbre == None:
         return Noeud(cle, None, None) # creation d'une feuille
     else:
-        if ...: 
+        if ...:
             arbre.gauche = insere(arbre.gauche, cle)
         else:
-            arbre.droit = ... 
+            arbre.droit = ...
         return arbre
 ```

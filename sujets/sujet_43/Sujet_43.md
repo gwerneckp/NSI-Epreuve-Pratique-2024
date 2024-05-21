@@ -25,7 +25,7 @@ False
 
 On souhaite générer des grilles du jeu de démineur à partir de la position des bombes à
 placer.  
-On se limite à la génération de grilles carrées de taille $n \times n$ où $n$ est le nombre de bombes du jeu.  
+On se limite à la génération de grilles carrées de taille $n \times n$ où $n$ est le nombre de bombes du jeu.
 
 Dans le jeu du démineur, chaque case de la grille contient soit une bombe, soit une valeur
 qui correspond aux nombres de bombes situées dans le voisinage direct de la case (au-
@@ -34,8 +34,7 @@ elle n'est pas située au bord de la grille).
 
 Voici un exemple de grille $5 \times 5$ de démineur dans laquelle la bombe est représentée par une étoile :
 
-![image](data2023/04grille.png){: .center}
-
+![image](images/image-13.png)
 
 On utilise une liste de listes pour représenter la grille et on choisit de coder une bombe par la valeur -1.
 
@@ -52,12 +51,11 @@ L'exemple ci-contre sera donc codé par la liste :
 Compléter le code suivant afin de générer des grilles de démineur, on pourra vérifier que
 l'appel
 
- `genere_grille([(1, 1), (2, 4), (3, 1), (3, 3), (4, 4)])`
-
+`genere_grille([(1, 1), (2, 4), (3, 1), (3, 3), (4, 4)])`
 
 renvoie bien la liste donnée en exemple.
 
-```python 
+```python
 def voisinage(n, ligne, colonne):
     """ Renvoie la liste des coordonnées des voisins de la case
     (ligne, colonne) en gérant les cases sur les bords. """
@@ -90,10 +88,8 @@ def genere_grille(bombes):
     for ligne, colonne in bombes:
         grille[ligne][colonne] = ... # place la bombe
         ... # incrémente ses voisins
-    
+
     return grille
 
 
 ```
-
-

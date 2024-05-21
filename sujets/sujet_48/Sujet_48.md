@@ -8,7 +8,7 @@ On suppose que les sommets sont numérotés de `0` à `n-1`.
 
 Par exemple, le graphe suivant :
 
-![image](data2024/graph2.png){: .center}
+![image](images/image-15.png)
 
 est représenté par la liste d'adjacence suivante :
 
@@ -29,36 +29,35 @@ Exemples :
 [0]
 ```
 
-
 ## Exercice 2
 
 On considère dans cet exercice la suite de nombre suivante : 1, 11, 21, 1211, 111221, ...
 
 Cette suite est construite ainsi : pour passer d'une valeur à la suivante, on la lit et on l'écrit sous la forme d'un nombre. Ainsi, pour 1211 :
 
-- on lit *un 1, un 2, deux 1* ;
-- on écrit donc en nombre *1 1, 1 2, 2 1* ;
-- puis on concatène *111221*.
+- on lit _un 1, un 2, deux 1_ ;
+- on écrit donc en nombre _1 1, 1 2, 2 1_ ;
+- puis on concatène _111221_.
 
 Compléter la fonction `nombre_suivant` qui prend en entrée un nombre sous forme de
 chaine de caractères et qui renvoie le nombre suivant par ce procédé, encore sous forme de
 chaîne de caractères.
 
-```python 
+```python
 def nombre_suivant(s):
     '''Renvoie le nombre suivant de celui representé par s
     en appliquant le procédé de lecture.'''
     resultat = ''
     chiffre = s[0]
     compte = 1
-    for i in range(...): 
+    for i in range(...):
         if s[i] == chiffre:
-            compte = ... 
+            compte = ...
         else:
-            resultat += ... + ... 
-            chiffre = ... 
+            resultat += ... + ...
+            chiffre = ...
             ...
-    lecture_... = ... + ... 
+    lecture_... = ... + ...
     resultat += lecture_chiffre
     return resultat
 
