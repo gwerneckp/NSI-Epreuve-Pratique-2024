@@ -1,4 +1,4 @@
-# Sujet_20
+# Sujet 20
 
 ## Exercice 1
 
