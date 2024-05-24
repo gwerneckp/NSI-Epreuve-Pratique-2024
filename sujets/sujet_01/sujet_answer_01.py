@@ -16,12 +16,8 @@ a = {
 
 # Votre code
 def taille(arbre: dict[str, list[str]], lettre: str) -> int:
-    if not arbre[lettre][0] and not arbre[lettre][1]:
-        return 1
-    if not arbre[lettre][0]:
-        return 1 + taille(arbre, arbre[lettre][1])
-    if not arbre[lettre][1]:
-        return 1 + taille(arbre, arbre[lettre][0])
+    if lettre == "":
+        return 0
     return 1 + taille(arbre, arbre[lettre][0]) + taille(arbre, arbre[lettre][1])
 
 

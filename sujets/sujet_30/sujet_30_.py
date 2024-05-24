@@ -1,23 +1,6 @@
 from unittest import TestCase, main
 
 
-def fusion(tab1: list[int], tab2: list[int]) -> list[int]:
-    res = []
-    i = 0
-    j = 0
-    while i < len(tab1) and j < len(tab2):
-        if tab1[i] < tab2[j]:
-            res.append(tab1[i])
-            i += 1
-            continue
-        res.append(tab2[j])
-        j += 1
-
-    return res + tab1[i:] + tab2[j:]
-
-    return sorted(tab1 + tab2)
-
-
 romains = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
 
@@ -33,21 +16,6 @@ def traduire_romain(nombre: str) -> int:
 
 
 class TestSujet30(TestCase):
-    def test_fusion_case_1(self) -> None:
-        self.assertEqual(fusion([3, 5], [2, 5]), [2, 3, 5, 5])
-
-    def test_fusion_case_2(self) -> None:
-        self.assertEqual(fusion([-2, 4], [-3, 5, 10]), [-3, -2, 4, 5, 10])
-
-    def test_fusion_case_3(self) -> None:
-        self.assertEqual(fusion([4], [2, 6]), [2, 4, 6])
-
-    def test_fusion_case_4(self) -> None:
-        self.assertEqual(fusion([], []), [])
-
-    def test_fusion_case_5(self) -> None:
-        self.assertEqual(fusion([1, 2, 3], []), [1, 2, 3])
-
     def test_traduire_romain_case_1(self) -> None:
         self.assertEqual(traduire_romain("XIV"), 14)
 

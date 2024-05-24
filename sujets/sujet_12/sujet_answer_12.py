@@ -4,11 +4,11 @@ from random import randint
 
 def tri_selection(tab: list[int]) -> list[int]:
     for i in range(len(tab)):
-        max_pos, max_val = i, tab[i]
+        min_pos = i
         for j in range(i, len(tab)):
-            if tab[j] < max_val:
-                max_pos, max_val = j, tab[j]
-        tab[i], tab[max_pos] = tab[max_pos], tab[i]
+            if tab[j] < tab[min_pos]:
+                min_pos = j
+        tab[i], tab[min_pos] = tab[min_pos], tab[i]
 
     return tab
 
